@@ -27,29 +27,19 @@ author_profile: true
 <style>
 
 #paper-list {
-
-padding-left: 0;
-
-list-style-position: inside;
-
+  padding-left: 0;
+  list-style-position: none;
 }
 
 .toggle-label {
-
-cursor: pointer;
-
-text-decoration: underline;
-
-color: #007acc;
-
-margin-bottom: 1rem;
-
-display: inline-block;
-
+  cursor: pointer;
+  text-decoration: underline;
+  color: #007acc;
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 
 </style>
-
 
 <p class="toggle-label" onclick="togglePapers()">
 
@@ -68,7 +58,7 @@ Show All Papers
 
 <li class="paper-entry" data-selected="{{ paper.selected | downcase }}">
 
-<span class="paper-number" style="display: none; font-weight: bold;">{{ number }}. </span>
+<span class="paper-number" style="font-weight: bold;">{{ number }}. </span>
 
 <strong>{{ paper.title }}</strong><br/>
 
