@@ -70,7 +70,7 @@ Show All Papers
   
   
   {% assign components = "" %}
-  {% if paper.venue != "" %} {% assign components = components | append: paper.venue | append", " %} {% endif %}
+  {% if paper.venue != "" %} {% assign components = components | append: paper.venue | append: ", " %} {% endif %}
   {% if paper.status != "" %} {% assign components = components | append: "<em>" | append: paper.status | append: "</em>" | append: ", " %} {% endif %}
   {% if paper.year != "" %} {% assign components = components | append: paper.year %} {% endif %}
   {{ components }}
