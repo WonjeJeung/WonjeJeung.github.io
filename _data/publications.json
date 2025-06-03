@@ -18,6 +18,7 @@
     "status": "UNDER REVIEW",
     "year": 2025,
     "pdf": true,
+    "selected": true,
     "pdf_url": "https://www.arxiv.org/abs/2505.15209",
     "website_url": "https://ai-isl.github.io/dusk",
     "desc": ""
@@ -50,6 +51,7 @@
     "status": "",
     "year": 2025,
     "pdf": true,
+    "selected": true,
     "pdf_url": "https://arxiv.org/abs/2504.01550",
     "desc": ""
   },
@@ -70,6 +72,7 @@
     "status": "",
     "year": 2025,
     "pdf": true,
+    "selected": true,
     "pdf_url": "https://arxiv.org/abs/2405.17878",
     "desc": ""
   },
@@ -80,6 +83,7 @@
     "status": "",
     "year": 2025,
     "pdf": true,
+    "selected": true,
     "pdf_url": "https://arxiv.org/abs/2410.17519",
     "desc": ""
   },
