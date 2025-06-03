@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}" target="_blank" rel="noopener noreferrer">my Google Scholar profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
@@ -19,16 +19,19 @@ author_profile: true
   .toggle-label {
     cursor: pointer;
     text-decoration: underline;
-    color: #007acc; /* Original blue for the toggle label */
+    color: #007acc; /* Bright blue for the toggle label */
     margin-bottom: 1rem;
     display: inline-block;
   }
-  .paper-link { /* New style for hyperlinks in paper entries */
-    color: #0056b3; /* A darker shade of blue for better visibility and clickability */
+  .paper-link {
+    color: #0056b3; /* Darker blue for general links to ensure visibility */
     text-decoration: none;
   }
   .paper-link:hover {
     text-decoration: underline;
+  }
+  .paper-entry {
+    margin-bottom: 1em; /* Add some space between papers */
   }
 </style>
   
@@ -52,24 +55,20 @@ author_profile: true
         {% assign components = components | append: paper.venue %}
       {% endif %}
       {% if paper.status %}
-        {% if components != "" and paper.venue %}
-          {% assign components = components | append: ", " %}
-        {% endif %}
+        {% if components != "" %}{% assign components = components | append: ", " %}{% endif %}
         {% assign components = components | append: "<em>" | append: paper.status | append: "</em>" %}
       {% endif %}
       {% if paper.year %}
-        {% if components != "" and (paper.venue or paper.status) %}
-          {% assign components = components | append: ", " %}
-        {% endif %}
+        {% if components != "" %}{% assign components = components | append: ", " %}{% endif %}
         {% assign components = components | append: paper.year %}
       {% endif %}
       {{ components }}
   
       {% if paper.pdf_url %}
-        <a href="{{ paper.pdf_url }}" target="_blank" class="paper-link">[pdf]</a>
+        <a href="{{ paper.pdf_url }}" target="_blank" rel="noopener noreferrer" class="paper-link">[pdf]</a>
       {% endif %}
       {% if paper.website_url %}
-        <a href="{{ paper.website_url }}" target="_blank" class="paper-link">[website]</a>
+        <a href="{{ paper.website_url }}" target="_blank" rel="noopener noreferrer" class="paper-link">[website]</a>
       {% endif %}
   
       {% if paper.desc %}
@@ -80,19 +79,24 @@ author_profile: true
 </ul>
   
 <script>
-  let showingAll = false; // Default to showing selected papers
+  let showingAll = false; // This variable tracks the current display state.
+
   function togglePapers() {
     const label = document.querySelector(".toggle-label");
     const papers = document.querySelectorAll(".paper-entry");
     const numbers = document.querySelectorAll(".paper-number");
   
-    showingAll = !showingAll;
+    showingAll = !showingAll; // Invert the state
   
     papers.forEach((el, idx) => {
       const isSelected = el.dataset.selected === "true";
-      el.style.display = showingAll || isSelected ? "block" : "none";
-      // Ensure paper numbers are only shown when "Show All Papers" is active
-      numbers[idx].style.display = showingAll ? "inline" : "none";
+      if (showingAll) {
+        el.style.display = "block"; // Show all papers
+        numbers[idx].style.display = "inline"; // Show numbers
+      } else {
+        el.style.display = isSelected ? "block" : "none"; // Show only selected papers
+        numbers[idx].style.display = "none"; // Hide numbers
+      }
     });
   
     label.textContent = showingAll ? "Show Selected Papers Only" : "Show All Papers";
@@ -100,20 +104,17 @@ author_profile: true
   
   // Set the initial state to "Selected Papers Only" when the page loads
   document.addEventListener("DOMContentLoaded", () => {
-    // We want to initially display only selected papers, which means `showingAll` should be `false`.
-    // The `togglePapers` function toggles the state, so to start with `showingAll = false`,
-    // we should make sure the initial call to `togglePapers` does not actually toggle it to `true`.
-    // Instead, we can directly set the display based on the desired initial state.
+    // Manually set the initial display based on `showingAll` being false (default)
     const papers = document.querySelectorAll(".paper-entry");
     const numbers = document.querySelectorAll(".paper-number");
     const label = document.querySelector(".toggle-label");
 
     papers.forEach((el, idx) => {
       const isSelected = el.dataset.selected === "true";
-      el.style.display = isSelected ? "block" : "none";
-      numbers[idx].style.display = "none"; // Numbers are hidden by default
+      el.style.display = isSelected ? "block" : "none"; // Only show selected papers
+      numbers[idx].style.display = "none"; // Hide numbers
     });
-    label.textContent = "Show All Papers"; // Set the initial label text correctly
-    showingAll = false; // Confirm the state
+    label.textContent = "Show All Papers"; // Initial label text
+    showingAll = false; // Confirm the initial state is 'showing selected only'
   });
 </script>
