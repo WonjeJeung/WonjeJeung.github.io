@@ -4,118 +4,81 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
-
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}" target="_blank" rel="noopener noreferrer">my Google Scholar profile</a>.</div>
+<div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
-
 {% include base_path %}
-
 <style>
-  #paper-list {
-    padding-left: 0;
-    list-style-type: none; /* 기본 목록 스타일 제거 */
-  }
-  .toggle-label {
-    cursor: pointer;
-    text-decoration: underline;
-    color: #007acc; /* 토글 버튼 텍스트 색상 */
-    margin-bottom: 1rem;
-    display: inline-block;
-  }
-  .paper-link {
-    color: #0056b3; /* 하이퍼링크 색상 (누를 수 있다는 느낌을 주기 위함) */
-    text-decoration: none;
-  }
-  .paper-link:hover {
-    text-decoration: underline;
-  }
-  .paper-entry {
-    margin-bottom: 1.5em; /* 각 논문 항목 사이 간격 */
-    line-height: 1.4; /* 줄 간격 조정 */
-  }
-  .paper-number {
-    font-weight: bold;
-    margin-right: 0.5em; /* 번호와 제목 사이 간격 */
-  }
+#paper-list {
+padding-left: 0;
+list-style-position: inside;
+}
+.toggle-label {
+cursor: pointer;
+text-decoration: underline;
+color: #007acc;
+margin-bottom: 1rem;
+display: inline-block;
+}
 </style>
-  
-<p class="toggle-label" id="toggleButton" onclick="togglePapers()">
-  Show All Papers
+<p class="toggle-label" onclick="togglePapers()">
+Show All Papers
 </p>
-  
 <ul id="paper-list">
-  {% assign total = site.data.publications | size %}
-  {% for paper in site.data.publications %}
-    {% assign number = total | minus: forloop.index0 %}
-    <li class="paper-entry" data-selected="{{ paper.selected | downcase }}">
-      <span class="paper-number" style="display: none;">{{ number }}.</span>
-      <strong>{{ paper.title }}</strong><br/>
-      {% if paper.authors %}
-        <em>{{ paper.authors }}</em><br/>
-      {% endif %}
-  
-      {% assign components = "" %}
-      {% if paper.venue %}
-        {% assign components = components | append: paper.venue %}
-      {% endif %}
-      {% if paper.status %}
-        {% if components != "" %}{% assign components = components | append: ", " %}{% endif %}
-        {% assign components = components | append: "<em>" | append: paper.status | append: "</em>" %}
-      {% endif %}
-      {% if paper.year %}
-        {% if components != "" %}{% assign components = components | append: ", " %}{% endif %}
-        {% assign components = components | append: paper.year %}
-      {% endif %}
-      {{ components }}
-  
-      {% if paper.pdf_url %}
-        <a href="{{ paper.pdf_url }}" target="_blank" rel="noopener noreferrer" class="paper-link">[pdf]</a>
-      {% endif %}
-      {% if paper.website_url %}
-        <a href="{{ paper.website_url }}" target="_blank" rel="noopener noreferrer" class="paper-link">[website]</a>
-      {% endif %}
-  
-      {% if paper.desc %}
-        <div style="margin-top: 0.3em; font-size: 0.9em; color: #555;">{{ paper.desc }}</div>
-      {% endif %}
-    </li>
-  {% endfor %}
+{% assign total = site.data.publications | size %}
+{% for paper in site.data.publications %}
+{% assign number = total | minus: forloop.index0 %}
+<li class="paper-entry" data-selected="{{ paper.selected | downcase }}">
+<span class="paper-number" style="display: none; font-weight: bold;">{{ number }}. </span>
+<strong>{{ paper.title }}</strong><br/>
+{% if paper.authors %}
+<em>{{ paper.authors }}</em><br/>
+{% endif %}
+{% assign components = "" %}
+{% if paper.venue %}
+{% assign components = components | append: paper.venue %}
+{% endif %}
+{% if paper.status %}
+{% if components != "" %}
+{% assign components = components | append: ", " %}
+{% endif %}
+{% assign components = components | append: "<em>" | append: paper.status | append: "</em>" %}
+{% endif %}
+{% if paper.year %}
+{% if components != "" %}
+{% assign components = components | append: ", " %}
+{% endif %}
+{% assign components = components | append: paper.year %}
+{% endif %}
+{{ components }}
+{% if paper.pdf_url %}
+<a href="{{ paper.pdf_url }}" target="_blank">[pdf]</a>
+{% endif %}
+{% if paper.website_url %}
+<a href="{{ paper.website_url }}" target="_blank">[website]</a>
+{% endif %}
+{% if paper.desc %}
+<div style="margin-top: 0.3em; font-size: 0.9em; color: #555;">{{ paper.desc }}</div>
+{% endif %}
+</li>
+{% endfor %}
 </ul>
-  
 <script>
-  let showingAll = true; // 초기값을 true로 설정하여 `togglePapers()` 첫 호출 시 false로 만들 준비
-
-  function togglePapers() {
-    const label = document.getElementById("toggleButton");
-    const papers = document.querySelectorAll(".paper-entry");
-    const numbers = document.querySelectorAll(".paper-number");
-  
-    showingAll = !showingAll; // 상태를 반전시킵니다.
-  
-    papers.forEach((el, idx) => {
-      const isSelected = el.dataset.selected === "true"; // 논문의 'selected' 데이터 속성 확인
-      
-      if (showingAll) {
-        // 'Show All Papers' 상태일 때: 모든 논문 표시
-        el.style.display = "block";
-        numbers[idx].style.display = "inline"; // 논문 번호 표시
-      } else {
-        // 'Show Selected Papers Only' 상태일 때: 선택된 논문만 표시
-        el.style.display = isSelected ? "block" : "none";
-        numbers[idx].style.display = "none"; // 논문 번호 숨김
-      }
-    });
-  
-    // 토글 버튼 텍스트를 현재 상태에 맞게 업데이트
-    label.textContent = showingAll ? "Show Selected Papers Only" : "Show All Papers";
-  }
-  
-  // 페이지 로드 시 초기 상태 설정
-  document.addEventListener("DOMContentLoaded", () => {
-    // 페이지 로드 시 'Selected Papers Only' 상태로 시작하기 위해 `togglePapers()`를 한 번 호출합니다.
-    // `showingAll`이 `true`로 초기화되어 있으므로, 첫 호출 시 `false`로 바뀌면서
-    // 'Selected Papers Only' 상태가 됩니다.
-    togglePapers(); 
-  });
+let showingAll = false;
+function togglePapers() {
+const label = document.querySelector(".toggle-label");
+const papers = document.querySelectorAll(".paper-entry");
+const numbers = document.querySelectorAll(".paper-number");
+showingAll = !showingAll;
+papers.forEach((el, idx) => {
+const isSelected = el.dataset.selected === "true";
+el.style.display = showingAll || isSelected ? "block" : "none";
+numbers[idx].style.display = showingAll ? "inline" : "none";
+});
+label.textContent = showingAll ? "Show Selected Papers Only" : "Show All Papers";
+}
+// default to Selected Only on load
+document.addEventListener("DOMContentLoaded", () => {
+togglePapers();
+});
 </script>
