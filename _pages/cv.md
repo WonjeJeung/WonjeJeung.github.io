@@ -7,4 +7,14 @@ redirect_from:
   - /resume
 ---
 
-Find my cv here: {% files cv.pdf %}
+{% include base_path %}
+  
+Teaching
+======
+  <ul>{% for post in site.teaching reversed %}
+    {% files cv.pdf %}
+  {% endfor %}</ul>
+  
+Service and leadership
+======
+* Currently signed in to 43 different slack teams
