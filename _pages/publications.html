@@ -12,34 +12,41 @@ author_profile: true
 {% include base_path %}
 
 <style>
-.toggle-label {
-  cursor: pointer;
-  text-decoration: underline;
-  color: #007acc;
-  margin-bottom: 1rem;
-  display: inline-block;
-}
-</style>
-
-<p class="toggle-label" onclick="togglePapers()">
-  Show All Papers
-</p>
-
-<ul id="paper-list">
-{% assign index = 0 %}
-{% for paper in site.data.publications %}
-  {% assign index = index | plus: 1 %}
-  <li class="paper-entry" data-selected="{{ paper.selected | downcase }}">
-    <span class="paper-number" style="display: none; font-weight: bold;">{{ index }}. </span>
-    <strong>{{ paper.title }}</strong><br/>
-    <em>{{ paper.authors }}</em><br/>
-    {% if paper.venue %}{{ paper.venue }}{% endif %}
-    {% if paper.status %}, <em>{{ paper.status }}</em>{% endif %}, {{ paper.year }}
-    {% if paper.pdf %} [pdf]{% endif %}
-    {% if paper.website %} [website]{% endif %}
-  </li>
-{% endfor %}
-</ul>
+  #paper-list {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+  .toggle-label {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #007acc;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  </style>
+  
+  <p class="toggle-label" onclick="togglePapers()">
+    Show All Papers
+  </p>
+  
+  <ul id="paper-list">
+  {% assign total = site.data.publications | size %}
+  {% for paper in site.data.publications %}
+    {% assign number = total | minus: forloop.index0 %}
+    <li class="paper-entry" data-selected="{{ paper.selected | downcase }}">
+      <span class="paper-number" style="display: none; font-weight: bold;">{{ number }}. </span>
+      <strong>{{ paper.title }}</strong><br/>
+      <em>{{ paper.authors }}</em><br/>
+      {% capture line %}{% if paper.venue %}{{ paper.venue }}{% endif %}
+      {% if paper.status %}{% if paper.venue %}, {% endif %}<em>{{ paper.status }}</em>{% endif %}
+      {% if paper.year %}{% if paper.venue or paper.status %}, {% endif %}{{ paper.year }}{% endif %}{% endcapture %}
+      {{ line | strip }}
+      {% if paper.pdf_url %} <a href="{{ paper.pdf_url }}" target="_blank">[pdf]</a>{% endif %}
+      {% if paper.website_url %} <a href="{{ paper.website_url }}" target="_blank">[website]</a>{% endif %}
+    </li>
+    
+  {% endfor %}
+  </ul>
 
 <script>
 let showingAll = false;
