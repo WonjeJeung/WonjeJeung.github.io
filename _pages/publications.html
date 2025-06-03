@@ -48,85 +48,57 @@ Show All Papers
 </p>
 
 
-<ul id="paper-list" style="list-style-position: none">
+<ul id="paper-list">
 
-{% assign total = site.data.publications | size %}
-
-{% for paper in site.data.publications %}
-
-{% assign number = total | minus: forloop.index0 %}
-
-<li class="paper-entry" data-selected="{{ paper.selected | downcase }}">
-
-<span class="paper-number" style="font-weight: bold;">{{ number }}. </span>
-
-<strong>{{ paper.title }}</strong><br/>
-
-{% if paper.authors %}
-
-<em>{{ paper.authors }}</em><br/>
-
-{% endif %}
-
-
-{% assign components = "" %}
-
-{% if paper.venue %}
-
-{% assign components = components | append: paper.venue %}
-
-{% endif %}
-
-{% if paper.status %}
-
-{% if components != "" %}
-
-{% assign components = components | append: ", " %}
-
-{% endif %}
-
-{% assign components = components | append: "<em>" | append: paper.status | append: "</em>" %}
-
-{% endif %}
-
-{% if paper.year %}
-
-{% if paper.status %}
-
-{% assign components = components | append: ", " %}
-
-{% endif %}
-
-{% assign components = components | append: paper.year %}
-
-{% endif %}
-
-{{ components }}
-
-
-{% if paper.pdf_url %}
-
-<a href="{{ paper.pdf_url }}" target="_blank">[pdf]</a>
-
-{% endif %}
-
-{% if paper.website_url %}
-
-<a href="{{ paper.website_url }}" target="_blank">[website]</a>
-
-{% endif %}
-
-
-{% if paper.desc %}
-
-<div style="margin-top: 0.3em; font-size: 0.9em; color: #555;">{{ paper.desc }}</div>
-
-{% endif %}
-
-</li>
-
-{% endfor %}
-
+  {% assign total = site.data.publications | size %}
+  
+  {% for paper in site.data.publications %}
+  
+  {% assign number = total | minus: forloop.index0 %}
+  
+  <li class="paper-entry" data-selected="{{ paper.selected | downcase }}">
+  
+  <span class="paper-number" style="display: none; font-weight: bold;">{{ number }}. </span>
+  
+  <strong>{{ paper.title }}</strong><br/>
+  
+  {% if paper.authors %}
+  
+  <em>{{ paper.authors }}</em><br/>
+  
+  {% endif %}
+  
+  
+  {% assign components = "" %}
+  {% if paper.venue %} {% assign components = components | append: paper.venue | ", " %} {% endif %}
+  {% if paper.status %} {% assign components = components | append: "<em>" | append: paper.status | append: "</em>" | append: ", " %} {% endif %}
+  {% if paper.year %} {% assign components = components | append: paper.year %} {% endif %}
+  {{ components }}
+  
+  
+  {% if paper.pdf_url %}
+  
+  <a href="{{ paper.pdf_url }}" target="_blank">[pdf]</a>
+  
+  {% endif %}
+  
+  {% if paper.website_url %}
+  
+  <a href="{{ paper.website_url }}" target="_blank">[website]</a>
+  
+  {% endif %}
+  
+  
+  {% if paper.desc %}
+  
+  <div style="margin-top: 0.3em; font-size: 0.9em; color: #555;">{{ paper.desc }}</div>
+  
+  {% endif %}
+  
+  </li>
+  
+  {% endfor %}
+  
 </ul>
 
 
