@@ -14,28 +14,33 @@ author_profile: true
 <style>
   #paper-list {
     padding-left: 0;
-    list-style-position: inside;
+    list-style-type: none; /* 기본 목록 스타일 제거 */
   }
   .toggle-label {
     cursor: pointer;
     text-decoration: underline;
-    color: #007acc; /* Bright blue for the toggle label */
+    color: #007acc; /* 토글 버튼 텍스트 색상 */
     margin-bottom: 1rem;
     display: inline-block;
   }
   .paper-link {
-    color: #0056b3; /* Darker blue for general links to ensure visibility */
+    color: #0056b3; /* 하이퍼링크 색상 (누를 수 있다는 느낌을 주기 위함) */
     text-decoration: none;
   }
   .paper-link:hover {
     text-decoration: underline;
   }
   .paper-entry {
-    margin-bottom: 1em; /* Add some space between papers */
+    margin-bottom: 1.5em; /* 각 논문 항목 사이 간격 */
+    line-height: 1.4; /* 줄 간격 조정 */
+  }
+  .paper-number {
+    font-weight: bold;
+    margin-right: 0.5em; /* 번호와 제목 사이 간격 */
   }
 </style>
   
-<p class="toggle-label" onclick="togglePapers()">
+<p class="toggle-label" id="toggleButton" onclick="togglePapers()">
   Show All Papers
 </p>
   
@@ -44,7 +49,7 @@ author_profile: true
   {% for paper in site.data.publications %}
     {% assign number = total | minus: forloop.index0 %}
     <li class="paper-entry" data-selected="{{ paper.selected | downcase }}">
-      <span class="paper-number" style="display: none; font-weight: bold;">{{ number }}. </span>
+      <span class="paper-number" style="display: none;">{{ number }}.</span>
       <strong>{{ paper.title }}</strong><br/>
       {% if paper.authors %}
         <em>{{ paper.authors }}</em><br/>
@@ -79,42 +84,48 @@ author_profile: true
 </ul>
   
 <script>
-  let showingAll = false; // This variable tracks the current display state.
+  let showingAll = false; // 현재 논문 표시 상태를 추적합니다. (false: 선택된 논문만, true: 모든 논문)
 
   function togglePapers() {
-    const label = document.querySelector(".toggle-label");
+    const label = document.getElementById("toggleButton");
     const papers = document.querySelectorAll(".paper-entry");
     const numbers = document.querySelectorAll(".paper-number");
   
-    showingAll = !showingAll; // Invert the state
+    showingAll = !showingAll; // 상태를 반전시킵니다.
   
     papers.forEach((el, idx) => {
-      const isSelected = el.dataset.selected === "true";
+      const isSelected = el.dataset.selected === "true"; // 논문의 'selected' 데이터 속성 확인
+      
       if (showingAll) {
-        el.style.display = "block"; // Show all papers
-        numbers[idx].style.display = "inline"; // Show numbers
+        // 'Show All Papers' 상태일 때: 모든 논문 표시
+        el.style.display = "block";
+        numbers[idx].style.display = "inline"; // 논문 번호 표시
       } else {
-        el.style.display = isSelected ? "block" : "none"; // Show only selected papers
-        numbers[idx].style.display = "none"; // Hide numbers
+        // 'Show Selected Papers Only' 상태일 때: 선택된 논문만 표시
+        el.style.display = isSelected ? "block" : "none";
+        numbers[idx].style.display = "none"; // 논문 번호 숨김
       }
     });
   
+    // 토글 버튼 텍스트를 현재 상태에 맞게 업데이트
     label.textContent = showingAll ? "Show Selected Papers Only" : "Show All Papers";
   }
   
-  // Set the initial state to "Selected Papers Only" when the page loads
+  // 페이지 로드 시 초기 상태 설정
   document.addEventListener("DOMContentLoaded", () => {
-    // Manually set the initial display based on `showingAll` being false (default)
     const papers = document.querySelectorAll(".paper-entry");
     const numbers = document.querySelectorAll(".paper-number");
-    const label = document.querySelector(".toggle-label");
+    const label = document.getElementById("toggleButton");
 
+    // 초기에는 'Selected Papers Only' 상태로 시작
     papers.forEach((el, idx) => {
       const isSelected = el.dataset.selected === "true";
-      el.style.display = isSelected ? "block" : "none"; // Only show selected papers
-      numbers[idx].style.display = "none"; // Hide numbers
+      el.style.display = isSelected ? "block" : "none"; // 'selected'가 true인 논문만 표시
+      numbers[idx].style.display = "none"; // 초기에는 논문 번호 숨김
     });
-    label.textContent = "Show All Papers"; // Initial label text
-    showingAll = false; // Confirm the initial state is 'showing selected only'
+    
+    // 토글 버튼의 초기 텍스트 설정
+    label.textContent = "Show All Papers"; 
+    showingAll = false; // 초기 상태는 'Selected Papers Only'임을 명시
   });
 </script>
