@@ -84,7 +84,7 @@ author_profile: true
 </ul>
   
 <script>
-  let showingAll = false; // 현재 논문 표시 상태를 추적합니다. (false: 선택된 논문만, true: 모든 논문)
+  let showingAll = true; // 초기값을 true로 설정하여 `togglePapers()` 첫 호출 시 false로 만들 준비
 
   function togglePapers() {
     const label = document.getElementById("toggleButton");
@@ -113,19 +113,9 @@ author_profile: true
   
   // 페이지 로드 시 초기 상태 설정
   document.addEventListener("DOMContentLoaded", () => {
-    const papers = document.querySelectorAll(".paper-entry");
-    const numbers = document.querySelectorAll(".paper-number");
-    const label = document.getElementById("toggleButton");
-
-    // 초기에는 'Selected Papers Only' 상태로 시작
-    papers.forEach((el, idx) => {
-      const isSelected = el.dataset.selected === "true";
-      el.style.display = isSelected ? "block" : "none"; // 'selected'가 true인 논문만 표시
-      numbers[idx].style.display = "none"; // 초기에는 논문 번호 숨김
-    });
-    
-    // 토글 버튼의 초기 텍스트 설정
-    label.textContent = "Show All Papers"; 
-    showingAll = false; // 초기 상태는 'Selected Papers Only'임을 명시
+    // 페이지 로드 시 'Selected Papers Only' 상태로 시작하기 위해 `togglePapers()`를 한 번 호출합니다.
+    // `showingAll`이 `true`로 초기화되어 있으므로, 첫 호출 시 `false`로 바뀌면서
+    // 'Selected Papers Only' 상태가 됩니다.
+    togglePapers(); 
   });
 </script>
