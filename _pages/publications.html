@@ -56,9 +56,9 @@ Show All Papers
   
   {% assign number = total | minus: forloop.index0 %}
   
-  <li class="paper-entry" data-selected="{{ paper.selected | downcase }}">
+  <li class="paper-entry" data-selected="{{ paper.selected | downcase }}" style="list-style-position: none;">
   
-  <span class="paper-number" style="display: none; font-weight: bold;">{{ number }}. </span>
+  <span class="paper-number" style="font-weight: bold;">{{ number }}. </span>
   
   <strong>{{ paper.title }}</strong><br/>
   
@@ -70,9 +70,9 @@ Show All Papers
   
   
   {% assign components = "" %}
-  {% if paper.venue %} {% assign components = components | append: paper.venue | ", " %} {% endif %}
-  {% if paper.status %} {% assign components = components | append: "<em>" | append: paper.status | append: "</em>" | append: ", " %} {% endif %}
-  {% if paper.year %} {% assign components = components | append: paper.year %} {% endif %}
+  {% if paper.venue != "" %} {% assign components = components | append: paper.venue | append", " %} {% endif %}
+  {% if paper.status != "" %} {% assign components = components | append: "<em>" | append: paper.status | append: "</em>" | append: ", " %} {% endif %}
+  {% if paper.year != "" %} {% assign components = components | append: paper.year %} {% endif %}
   {{ components }}
   
   
