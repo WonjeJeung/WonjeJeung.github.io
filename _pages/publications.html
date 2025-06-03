@@ -48,7 +48,7 @@ Show All Papers
 </p>
 
 
-<ul id="paper-list">
+<ul id="paper-list" style="list-style-position: none">
 
 {% assign total = site.data.publications | size %}
 
@@ -91,7 +91,7 @@ Show All Papers
 
 {% if paper.year %}
 
-{% if components != "" %}
+{% if paper.status %}
 
 {% assign components = components | append: ", " %}
 
