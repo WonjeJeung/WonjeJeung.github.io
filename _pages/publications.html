@@ -1,148 +1,159 @@
 ---
+
 layout: archive
+
 title: "Publications"
+
 permalink: /publications/
+
 author_profile: true
+
 ---
 
+
+
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}" target="_blank" rel="noopener noreferrer">my Google Scholar profile</a>.</div>
+
+<div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+
 {% endif %}
+
+
 
 {% include base_path %}
 
-<style>
-  #paper-list {
-    padding-left: 0;
-    list-style-type: none; /* 리스트 마커 제거 */
-  }
-  .toggle-label {
-    cursor: pointer;
-    text-decoration: underline;
-    color: #007acc; /* 토글 버튼 텍스트 색상 */
-    margin-bottom: 1rem;
-    display: inline-block;
-  }
-  .paper-link { /* 하이퍼링크에 적용될 스타일 */
-    color: #0056b3; /* 더 진한 파란색으로 변경 */
-    text-decoration: none; /* 기본 밑줄 제거 */
-  }
-  .paper-link:hover {
-    text-decoration: underline; /* 마우스 오버 시 밑줄 추가 */
-  }
-  /* --- 여기부터 .paper-entry 및 .paper-number의 초기 상태 CSS 수정 --- */
-  .paper-entry { /* 모든 논문 항목을 기본적으로 숨깁니다. */
-    margin-bottom: 1.5em;
-    line-height: 1.4;
-    display: none; /* 기본적으로 숨김 */
-  }
-  .paper-entry[data-selected="true"] { /* data-selected="true"인 항목만 보이도록 설정합니다. */
-    display: block;
-  }
-  .paper-number { /* 넘버링 스타일 (초기에는 숨겨질 예정) */
-    font-weight: bold;
-    margin-right: 0.5em;
-    display: none; /* 초기 로드 시 넘버링은 숨김 */
-  }
-  /* --- 여기까지 초기 상태 CSS 수정 --- */
-</style>
-  
-<p class="toggle-label" id="toggleButton" onclick="togglePapers()">
-  Show All Papers
-</p>
-  
-<ul id="paper-list">
-  {% assign total = site.data.publications | size %}
-  {% for paper in site.data.publications %}
-    {% assign number = total | minus: forloop.index0 %}
-    <li class="paper-entry" data-selected="{{ paper.selected | downcase }}">
-      <span class="paper-number">{{ number }}.</span>
-      <strong>{{ paper.title }}</strong><br/>
-      {% if paper.authors %}
-        <em>
-          {% assign authors_array = paper.authors | split: ", " %}
-          {% for author in authors_array %}
-            {% assign trimmed_author = author | strip %}
-            {% if trimmed_author == "Wonje Jeung" or trimmed_author == "Wonje Jeung*" %}
-              <strong>{{ trimmed_author }}</strong>{% if forloop.last == false %},{% endif %}
-            {% else %}
-              {{ trimmed_author }}{% if forloop.last == false %},{% endif %}
-            {% endif %}
-            {% if forloop.last == false %}&nbsp;{% endif %}
-          {% endfor %}
-        </em><br/>
-      {% endif %}
-  
-      {% assign components = "" %}
 
-      {% if paper.venue %}
-        {% assign components = components | append: paper.venue %}
-      {% endif %}
-
-      {% if paper.status %}
-        {% if components != "" %}
-          {% assign components = components | append: ", " %}
-        {% endif %}
-        {% assign components = components | append: "<em>" | append: paper.status | append: "</em>" %}
-      {% endif %}
-
-      {% if paper.year %}
-        {% if components != "" %}
-          {% assign components = components | append: ", " %}
-        {% endif %}
-        {% assign components = components | append: paper.year %}
-      {% endif %}
-      {{ components }}
-  
-      {% if paper.pdf_url %}
-        <a href="{{ paper.pdf_url }}" target="_blank" rel="noopener noreferrer" class="paper-link">[pdf]</a>
-      {% endif %}
-      {% if paper.website_url %}
-        <a href="{{ paper.website_url }}" target="_blank" rel="noopener noreferrer" class="paper-link">[website]</a>
-      {% endif %}
-  
-      {% if paper.desc %}
-        <div style="margin-top: 0.3em; font-size: 0.9em; color: #555;">{{ paper.desc }}</div>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
-  
 <script>
-  // 초기 상태는 HTML/CSS에 의해 "Selected Papers Only"로 설정되어 있으므로, 
-  // JavaScript의 showingAll 변수는 첫 클릭 시 'Show All Papers'로 바뀌도록 준비합니다.
-  let showingAll = false; // 초기값은 false로 설정 (Selected Papers Only 상태)
 
+  let showingAll = true;
+  
   function togglePapers() {
-    const label = document.getElementById("toggleButton"); 
+    const label = document.querySelector(".toggle-label");
     const papers = document.querySelectorAll(".paper-entry");
     const numbers = document.querySelectorAll(".paper-number");
-  
-    showingAll = !showingAll; // 상태 반전
-
+    showingAll = !showingAll;
     papers.forEach((el, idx) => {
-      const isSelected = el.dataset.selected === "true";
-      
-      if (showingAll) {
-        // 'Show All Papers' 상태일 때: 모든 논문과 넘버링 표시
-        el.style.display = "block";
-        numbers[idx].style.display = "inline";
-      } else {
-        // 'Show Selected Papers Only' 상태일 때: 선택된 논문만 보이고 넘버링 숨기기
-        el.style.display = isSelected ? "block" : "none";
-        numbers[idx].style.display = "none";
-      }
+    const isSelected = el.dataset.selected === "true";
+    el.style.display = showingAll || isSelected ? "block" : "none";
+    numbers[idx].style.display = showingAll ? "inline" : "none";
     });
-  
-    // 토글 버튼 텍스트 업데이트
     label.textContent = showingAll ? "Show Selected Papers Only" : "Show All Papers";
   }
   
-  // 페이지 로드 시 HTML/CSS에 의해 이미 "Selected Papers Only" 상태입니다.
-  // JavaScript는 토글 버튼 텍스트만 초기화합니다.
+  // default to Selected Only on load
+  
   document.addEventListener("DOMContentLoaded", () => {
-    const label = document.getElementById("toggleButton");
-    label.textContent = "Show All Papers"; // 초기 버튼 텍스트는 "Show All Papers"로 설정
-    // showingAll은 이미 false이므로 별도의 togglePapers() 호출은 불필요합니다.
+  
+  togglePapers();
   });
-</script>
+  
+  </script>
+  
+
+  <style>
+    #paper-list {
+      padding-left: 0;
+      list-style-type: none; /* 리스트 마커 제거 */
+    }
+    .toggle-label {
+      cursor: pointer;
+      text-decoration: underline;
+      color: #007acc; /* 토글 버튼 텍스트 색상 */
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .paper-link { /* 하이퍼링크에 적용될 스타일 */
+      color: #0056b3; /* 더 진한 파란색으로 변경 */
+      text-decoration: none; /* 기본 밑줄 제거 */
+    }
+    .paper-link:hover {
+      text-decoration: underline; /* 마우스 오버 시 밑줄 추가 */
+    }
+    /* --- 여기부터 .paper-entry 및 .paper-number의 초기 상태 CSS 수정 --- */
+    .paper-entry { /* 모든 논문 항목을 기본적으로 숨깁니다. */
+      margin-bottom: 1.5em;
+      line-height: 1.4;
+      display: none; /* 기본적으로 숨김 */
+    }
+    .paper-entry[data-selected="true"] { /* data-selected="true"인 항목만 보이도록 설정합니다. */
+      display: block;
+    }
+    .paper-number { /* 넘버링 스타일 (초기에는 숨겨질 예정) */
+      font-weight: bold;
+      margin-right: 0.5em;
+      display: none; /* 초기 로드 시 넘버링은 숨김 */
+    }
+    /* --- 여기까지 초기 상태 CSS 수정 --- */
+  </style>
+
+<p class="toggle-label" onclick="togglePapers()">
+
+Show All Papers
+
+</p>
+
+
+<ul id="paper-list" style="list-style-type: none;">
+
+  {% assign total = site.data.publications | size %}
+  
+  {% for paper in site.data.publications %}
+  
+  {% assign number = total | minus: forloop.index0 %}
+  
+  <li class="paper-entry" data-selected="{{ paper.selected | downcase }}" style="list-style-type: none;">
+  
+  <span class="paper-number" style="font-weight: bold;">{{ number }}. </span>
+  
+  <strong>{{ paper.title }}</strong><br/>
+  
+  {% if paper.authors %}
+      {% comment %} Split authors by ", " to handle cases like "Author1, Author2, Author3" {% endcomment %}
+      {% assign authors_array = paper.authors | split: ", " %}
+      {% for author in authors_array %}
+        {% assign trimmed_author = author | strip %}
+        {% comment %} Check for "Wonje Jeung" or "Wonje Jeung*" {% endcomment %}
+        {% if trimmed_author == "Wonje Jeung" or trimmed_author == "Wonje Jeung*" %}
+          <strong>{{ trimmed_author }}</strong>{% if forloop.last == false %},{% endif %}
+        {% else %}
+          {{ trimmed_author }}{% if forloop.last == false %},{% endif %}
+        {% endif %}
+        {% if forloop.last == false %}{% endif %}
+      {% endfor %}<br/>
+  {% endif %}
+  
+  
+  
+  {% assign components = "" %}
+  {% if paper.venue != "" %} {% assign components = components | append: paper.venue | append: ", " %} {% endif %}
+  {% if paper.status != "" %} {% assign components = components | append: "<em>" | append: paper.status | append: "</em>" | append: ", " %} {% endif %}
+  {% if paper.year != "" %} {% assign components = components | append: paper.year %} {% endif %}
+  {{ components }}
+  
+  
+  {% if paper.pdf_url %}
+  
+  <a href="{{ paper.pdf_url }}" target="_blank">[pdf]</a>
+  
+  {% endif %}
+  
+  {% if paper.website_url %}
+  
+  <a href="{{ paper.website_url }}" target="_blank">[website]</a>
+  
+  {% endif %}
+  
+  
+  {% if paper.desc %}
+  
+  <div style="margin-top: 0.3em; font-size: 0.9em; color: #555;">{{ paper.desc }}</div>
+  
+  {% endif %}
+  
+  </li>
+  
+  {% endfor %}
+  
+</ul>
+
+
