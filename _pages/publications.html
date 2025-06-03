@@ -19,17 +19,24 @@ author_profile: true
   .toggle-label {
     cursor: pointer;
     text-decoration: underline;
-    color: #007acc;
+    color: #007acc; /* Original blue for the toggle label */
     margin-bottom: 1rem;
     display: inline-block;
   }
-  </style>
+  .paper-link { /* New style for hyperlinks in paper entries */
+    color: #0056b3; /* A darker shade of blue for better visibility and clickability */
+    text-decoration: none;
+  }
+  .paper-link:hover {
+    text-decoration: underline;
+  }
+</style>
   
-  <p class="toggle-label" onclick="togglePapers()">
-    Show All Papers
-  </p>
+<p class="toggle-label" onclick="togglePapers()">
+  Show All Papers
+</p>
   
-  <ul id="paper-list">
+<ul id="paper-list">
   {% assign total = site.data.publications | size %}
   {% for paper in site.data.publications %}
     {% assign number = total | minus: forloop.index0 %}
@@ -45,13 +52,13 @@ author_profile: true
         {% assign components = components | append: paper.venue %}
       {% endif %}
       {% if paper.status %}
-        {% if components != "" %}
+        {% if components != "" and paper.venue %}
           {% assign components = components | append: ", " %}
         {% endif %}
         {% assign components = components | append: "<em>" | append: paper.status | append: "</em>" %}
       {% endif %}
       {% if paper.year %}
-        {% if components != "" %}
+        {% if components != "" and (paper.venue or paper.status) %}
           {% assign components = components | append: ", " %}
         {% endif %}
         {% assign components = components | append: paper.year %}
@@ -59,10 +66,10 @@ author_profile: true
       {{ components }}
   
       {% if paper.pdf_url %}
-        <a href="{{ paper.pdf_url }}" target="_blank">[pdf]</a>
+        <a href="{{ paper.pdf_url }}" target="_blank" class="paper-link">[pdf]</a>
       {% endif %}
       {% if paper.website_url %}
-        <a href="{{ paper.website_url }}" target="_blank">[website]</a>
+        <a href="{{ paper.website_url }}" target="_blank" class="paper-link">[website]</a>
       {% endif %}
   
       {% if paper.desc %}
@@ -70,10 +77,10 @@ author_profile: true
       {% endif %}
     </li>
   {% endfor %}
-  </ul>
+</ul>
   
-  <script>
-  let showingAll = false;
+<script>
+  let showingAll = false; // Default to showing selected papers
   function togglePapers() {
     const label = document.querySelector(".toggle-label");
     const papers = document.querySelectorAll(".paper-entry");
@@ -84,14 +91,29 @@ author_profile: true
     papers.forEach((el, idx) => {
       const isSelected = el.dataset.selected === "true";
       el.style.display = showingAll || isSelected ? "block" : "none";
+      // Ensure paper numbers are only shown when "Show All Papers" is active
       numbers[idx].style.display = showingAll ? "inline" : "none";
     });
   
     label.textContent = showingAll ? "Show Selected Papers Only" : "Show All Papers";
   }
   
-  // default to Selected Only on load
+  // Set the initial state to "Selected Papers Only" when the page loads
   document.addEventListener("DOMContentLoaded", () => {
-    togglePapers();
+    // We want to initially display only selected papers, which means `showingAll` should be `false`.
+    // The `togglePapers` function toggles the state, so to start with `showingAll = false`,
+    // we should make sure the initial call to `togglePapers` does not actually toggle it to `true`.
+    // Instead, we can directly set the display based on the desired initial state.
+    const papers = document.querySelectorAll(".paper-entry");
+    const numbers = document.querySelectorAll(".paper-number");
+    const label = document.querySelector(".toggle-label");
+
+    papers.forEach((el, idx) => {
+      const isSelected = el.dataset.selected === "true";
+      el.style.display = isSelected ? "block" : "none";
+      numbers[idx].style.display = "none"; // Numbers are hidden by default
+    });
+    label.textContent = "Show All Papers"; // Set the initial label text correctly
+    showingAll = false; // Confirm the state
   });
-  </script>
+</script>
