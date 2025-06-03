@@ -84,16 +84,6 @@
     "desc": ""
   },
   {
-    "title": "2nd Place in Class-Incremental with Repetition (CIR) using Unlabeled Data",
-    "authors": "",
-    "venue": "CVPR WORKSHOP (CLVISION)",
-    "status": "",
-    "year": 2024,
-    "pdf": false,
-    "website_url": "https://sites.google.com/view/clvision2024/challenge/challenge-results",
-    "desc": ""
-  },
-  {
     "title": "ReALFRED: An Embodied Instruction Following Benchmark in Photo-Realistic Environments",
     "authors": "Taewoong Kim*, Cheolhong Min*, Byeonghwi Kim, Jinyeon Kim, Wonje Jeung, Jonghyun Choi",
     "venue": "ECCV",
