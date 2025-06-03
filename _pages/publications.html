@@ -11,26 +11,42 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+<script>
+function togglePapers(showAll) {
+  document.querySelectorAll('.paper-entry').forEach(el => {
+    if (showAll || el.dataset.selected === "true") {
+      el.style.display = 'block';
+    } else {
+      el.style.display = 'none';
+    }
+  });
+}
+</script>
+
+<div>
+  <button onclick="togglePapers(false)">Selected Papers</button>
+  <button onclick="togglePapers(true)">All Papers</button>
+</div>
+
+<ul>
+{% for paper in site.data.publications %}
+  <li class="paper-entry" data-selected="{{ paper.selected }}">
+    <strong>{{ paper.title }}</strong><br/>
+    <em>{{ paper.author }}</em><br/>
+    {{ paper.venue }}, {{ paper.year }}
+  </li>
+{% endfor %}
+</ul>
+
+<script>togglePapers(false);</script>
+
 
 
 
