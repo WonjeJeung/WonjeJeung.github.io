@@ -67,14 +67,14 @@ Show All Papers
       {% comment %} Split authors by ", " to handle cases like "Author1, Author2, Author3" {% endcomment %}
       {% assign authors_array = paper.authors | split: ", " %}
       {% for author in authors_array %}
-        {% assign trimmed_author = author | strip %} {# Remove any leading/trailing whitespace #}
+        {% assign trimmed_author = author | strip %}
         {% comment %} Check for "Wonje Jeung" or "Wonje Jeung*" {% endcomment %}
         {% if trimmed_author == "Wonje Jeung" or trimmed_author == "Wonje Jeung*" %}
           <strong>{{ trimmed_author }}</strong>{% if forloop.last == false %},{% endif %}
         {% else %}
           {{ trimmed_author }}{% if forloop.last == false %},{% endif %}
         {% endif %}
-        {% if forloop.last == false %}&nbsp;{% endif %} {# Add a non-breaking space between authors unless it's the last one #}
+        {% if forloop.last == false %}&nbsp;{% endif %}
       {% endfor %}
     </em><br/>
   {% endif %}
@@ -116,33 +116,19 @@ Show All Papers
 
 <script>
 
-let showingAll = false;
+let showingAll = true;
 
 function togglePapers() {
-
-const label = document.querySelector(".toggle-label");
-
-const papers = document.querySelectorAll(".paper-entry");
-
-const numbers = document.querySelectorAll(".paper-number");
-
-
-showingAll = !showingAll;
-
-
-papers.forEach((el, idx) => {
-
-const isSelected = el.dataset.selected === "true";
-
-el.style.display = showingAll || isSelected ? "block" : "none";
-
-numbers[idx].style.display = showingAll ? "inline" : "none";
-
-});
-
-
-label.textContent = showingAll ? "Show Selected Papers Only" : "Show All Papers";
-
+  const label = document.querySelector(".toggle-label");
+  const papers = document.querySelectorAll(".paper-entry");
+  const numbers = document.querySelectorAll(".paper-number");
+  showingAll = !showingAll;
+  papers.forEach((el, idx) => {
+  const isSelected = el.dataset.selected === "true";
+  el.style.display = showingAll || isSelected ? "block" : "none";
+  numbers[idx].style.display = showingAll ? "inline" : "none";
+  });
+  label.textContent = showingAll ? "Show Selected Papers Only" : "Show All Papers";
 }
 
 
@@ -151,7 +137,6 @@ label.textContent = showingAll ? "Show Selected Papers Only" : "Show All Papers"
 document.addEventListener("DOMContentLoaded", () => {
 
 togglePapers();
-
 });
 
 </script>
