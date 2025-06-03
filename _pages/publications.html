@@ -48,7 +48,7 @@ Show All Papers
 </p>
 
 
-<ul id="paper-list">
+<ul id="paper-list" style="list-style-type: none;">
 
   {% assign total = site.data.publications | size %}
   
@@ -56,17 +56,29 @@ Show All Papers
   
   {% assign number = total | minus: forloop.index0 %}
   
-  <li class="paper-entry" data-selected="{{ paper.selected | downcase }}" style="list-style-position: none;">
+  <li class="paper-entry" data-selected="{{ paper.selected | downcase }}" style="list-style-type: none;">
   
   <span class="paper-number" style="font-weight: bold;">{{ number }}. </span>
   
   <strong>{{ paper.title }}</strong><br/>
   
   {% if paper.authors %}
-  
-  <em>{{ paper.authors }}</em><br/>
-  
+    <em>
+      {% comment %} Split authors by ", " to handle cases like "Author1, Author2, Author3" {% endcomment %}
+      {% assign authors_array = paper.authors | split: ", " %}
+      {% for author in authors_array %}
+        {% assign trimmed_author = author | strip %} {# Remove any leading/trailing whitespace #}
+        {% comment %} Check for "Wonje Jeung" or "Wonje Jeung*" {% endcomment %}
+        {% if trimmed_author == "Wonje Jeung" or trimmed_author == "Wonje Jeung*" %}
+          <strong>{{ trimmed_author }}</strong>{% if forloop.last == false %},{% endif %}
+        {% else %}
+          {{ trimmed_author }}{% if forloop.last == false %},{% endif %}
+        {% endif %}
+        {% if forloop.last == false %}&nbsp;{% endif %} {# Add a non-breaking space between authors unless it's the last one #}
+      {% endfor %}
+    </em><br/>
   {% endif %}
+  
   
   
   {% assign components = "" %}
