@@ -7,6 +7,4 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
-
-<iframe src="{{ '/files/cv.pdf' | relative_url }}" width="100%" height="800px"></iframe>
+<iframe src="{{ '/files/cv.pdf' | relative_url }}" width="100%" height="1200px"></iframe>
