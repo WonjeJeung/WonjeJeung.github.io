@@ -1,16 +1,103 @@
 [
-    {
-      "title": "DUSK: Do Not Unlearn Shared Knowledge",
-      "author": "Wonje Jeung and Others",
-      "venue": "NeurIPS",
-      "year": 2025,
-      "selected": true
-    },
-    {
-      "title": "SEPS: A Separability Measure for Robust Unlearning",
-      "author": "Wonje Jeung and Others",
-      "venue": "ACL",
-      "year": 2024,
-      "selected": false
-    }
-  ]
+  {
+    "title": "SAFEPATH: Preventing Harmful Reasoning in Chain-of-Thought via Early Alignment",
+    "authors": "Wonje Jeung, Sangyeon Yoon, Minsuk Kang, Albert No",
+    "venue": "NeurIPS",
+    "status": "UNDER REVIEW",
+    "year": 2025,
+    "pdf": true,
+    "website": true,
+    "selected": true
+  },
+  {
+    "title": "DUSK: Do not unlearn shared knowledge",
+    "authors": "Wonje Jeung*, Sangyeon Yoon*, Haesoo Hong, Soeun Kim, Seungju Han, Youngjae Yu, Albert No",
+    "venue": "NeurIPS",
+    "status": "UNDER REVIEW",
+    "year": 2025,
+    "pdf": true,
+    "website": true,
+    "selected": true
+  },
+  {
+    "title": "R-TOFU: Unlearning in Large Reasoning Models",
+    "authors": "Sangyeon Yoon, Wonje Jeung, Albert No",
+    "venue": "EMNLP",
+    "status": "UNDER REVIEW",
+    "year": 2025,
+    "pdf": true,
+    "website": true,
+    "selected": true
+  },
+  {
+    "title": "SEPS: A Separability Measure for Robust Unlearning in LLMs",
+    "authors": "Wonje Jeung*, Sanyeon Yoon*, Albert No",
+    "venue": "EMNLP",
+    "status": "UNDER REVIEW",
+    "year": 2025,
+    "pdf": true,
+    "website": false,
+    "selected": true
+  },
+  {
+    "title": "Representation Bending for Large Language Model Safety",
+    "authors": "Ashkan Yousefpour*, Taeheon Kim*, Ryan Sungmo Kwon, Seungbeen Lee, Wonje Jeung, Seungju Han, Alvin Wan, Harrison Ngan, Youngjae Yu, Jonghyun Choi",
+    "venue": "ACL",
+    "status": "",
+    "year": 2025,
+    "pdf": true,
+    "website": false,
+    "selected": false
+  },
+  {
+    "title": "Adversarial Sample-Based Approach for Tighter Privacy Auditing in Final Model-Only Scenarios",
+    "authors": "Sangyeon Yoon*, Wonje Jeung*, Albert No",
+    "venue": "NeurIPS WORKSHOP (SFLLM)",
+    "status": "",
+    "year": 2024,
+    "pdf": true,
+    "website": false,
+    "selected": false
+  },
+  {
+    "title": "An Information Theoretic Metric for Evaluating Unlearning Models",
+    "authors": "Dongjae Jeon*, Wonje Jeung*, Taeheon Kim, Albert No, Jonghyun Choi",
+    "venue": "",
+    "status": "",
+    "year": 2025,
+    "pdf": true,
+    "website": false,
+    "selected": false
+  },
+  {
+    "id": 4,
+    "title": "Large Language Models Still Exhibit Bias in Long Text",
+    "authors": "Wonje Jeung, Dongjae Jeon, Ashkan Yousefpour, Jonghyun Choi",
+    "venue": "ACL",
+    "status": "",
+    "year": 2025,
+    "pdf": true,
+    "website": false,
+    "selected": false
+  },
+  {
+    "title": "ReALFRED: An Embodied Instruction Following Benchmark in Photo-Realistic Environments",
+    "authors": "Taewoong Kim*, Cheolhong Min*, Byeonghwi Kim, Jinyeon Kim, Wonje Jeung, Jonghyun Choi",
+    "venue": "ECCV",
+    "status": "",
+    "year": 2024,
+    "pdf": true,
+    "website": false,
+    "selected": false
+  },
+  {
+    "title": "Learning Equi-angular Representations for Online Continual Learning",
+    "authors": "Minhyuk Seo, Hyunseo Koh, Wonje Jeung, Minjae Lee, San Kim, Hankook Lee, Sungjun Cho, Sungik Choi, Hyunwoo Kim, Jonghyun Choi",
+    "venue": "CVPR",
+    "status": "",
+    "year": 2024,
+    "pdf": true,
+    "website": false,
+    "selected": false
+  }
+]

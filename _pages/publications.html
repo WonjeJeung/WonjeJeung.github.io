@@ -11,42 +11,54 @@ author_profile: true
 
 {% include base_path %}
 
----
-layout: archive
-title: "Publications"
-permalink: /publications/
-author_profile: true
----
-
-<script>
-function togglePapers(showAll) {
-  document.querySelectorAll('.paper-entry').forEach(el => {
-    if (showAll || el.dataset.selected === "true") {
-      el.style.display = 'block';
-    } else {
-      el.style.display = 'none';
-    }
-  });
+<style>
+.toggle-label {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #007acc;
+  margin-bottom: 1rem;
+  display: inline-block;
 }
-</script>
+</style>
 
-<div>
-  <button onclick="togglePapers(false)">Selected Papers</button>
-  <button onclick="togglePapers(true)">All Papers</button>
-</div>
+<p class="toggle-label" onclick="togglePapers()">
+  Show All Papers
+</p>
 
-<ul>
+<ul id="paper-list">
+{% assign index = 0 %}
 {% for paper in site.data.publications %}
-  <li class="paper-entry" data-selected="{{ paper.selected }}">
+  {% assign index = index | plus: 1 %}
+  <li class="paper-entry" data-selected="{{ paper.selected | downcase }}">
+    <span class="paper-number" style="display: none; font-weight: bold;">{{ index }}. </span>
     <strong>{{ paper.title }}</strong><br/>
-    <em>{{ paper.author }}</em><br/>
-    {{ paper.venue }}, {{ paper.year }}
+    <em>{{ paper.authors }}</em><br/>
+    {% if paper.venue %}{{ paper.venue }}{% endif %}
+    {% if paper.status %}, <em>{{ paper.status }}</em>{% endif %}, {{ paper.year }}
+    {% if paper.pdf %} [pdf]{% endif %}
+    {% if paper.website %} [website]{% endif %}
   </li>
 {% endfor %}
 </ul>
 
-<script>togglePapers(false);</script>
+<script>
+let showingAll = false;
+function togglePapers() {
+  const label = document.querySelector(".toggle-label");
+  const papers = document.querySelectorAll(".paper-entry");
+  const numbers = document.querySelectorAll(".paper-number");
 
+  showingAll = !showingAll;
 
+  papers.forEach((el, idx) => {
+    const isSelected = el.dataset.selected === "true";
+    el.style.display = showingAll || isSelected ? "block" : "none";
+    numbers[idx].style.display = showingAll ? "inline" : "none";
+  });
 
+  label.textContent = showingAll ? "Show Selected Papers Only" : "Show All Papers";
+}
 
+// Start with selected only
+togglePapers();
+</script>
