@@ -6,14 +6,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
----
-permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
-author_profile: true
-redirect_from:
-  - /about/
-  - /about.html
----
 
 <style>
   /* 필요한 다른 CSS 스타일이 있다면 여기에 추가하세요 */
@@ -28,7 +20,7 @@ Previously, I gained valuable research experience working with Professor <span c
 
 
 <section class="research-section">
-  <h2 class="section-title">🔬 Research Interests</h2>
+  <h2 class="section-title">Research Interests</h2>
   <p>My research spans three core areas:</p>
 
   <ul class="research-list">
