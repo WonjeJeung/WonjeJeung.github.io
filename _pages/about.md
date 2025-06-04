@@ -20,8 +20,10 @@ Previously, I gained valuable research experience working with Professor <span c
 <hr>
 <h2>News</h2>
 <ul>
-  <li>June 2025: We published our latest work on <a href="#">efficient unlearning in large reasoning models</a> at ACL 2025! See you in Vienna.</li>
-  <li>May 2025: Presented our findings on <a href="#">enhancing the safety of LLMs against jailbreaking attacks</a> at NeurIPS 2024.</li>
-  <li>April 2025: Excited to share our paper on <a href="#">privacy-preserving federated learning for AI safety</a> accepted to ICML 2025!</li>
-  <li>March 2025: New research exploring <a href="#">interpretable reasoning in efficient transformer architectures</a> is now available on arXiv.</li>
+  <li><b>May 2025:</b> Four new papers are now on arXiv! These include work on safety alignment in reasoning models (<span>SAFEPATH</span>), unlearning benchmarks (<span>DUSK</span> and <span>R-TOFU</span>), and unlearning fragility (<span>SEPS</span>).</li>
+  <li><b>May 2025:</b> Two papers—<span class="blue-text">LTF-TEST</span> and <span class="blue-text">RepBend</span>—have been accepted to ACL 2025. See you in Austria 🇦🇹!</li>
+  <li><b>Dec 2024:</b> Our paper on sample-based privacy auditing for final model-only scenarios will appear at the NeurIPS SoLaR Workshop. See you in Canada 🇨🇦!</li>
+  <li><b>July 2024:</b> One paper accepted to ECCV: <span class="blue-text">REALFRED</span>.</li>
+  <li><b>May 2024:</b> We introduce a new information-theoretic metric for evaluating unlearning.</li>
+  <li><b>March 2024:</b> One paper accepted to CVPR: <span class="blue-text">EARL</span>.</li>
 </ul>
