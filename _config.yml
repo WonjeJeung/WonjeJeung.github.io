@@ -24,8 +24,8 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Wonje Jeung"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  pronouns         : "he/him"  
+  bio              : "AI Master's student at Yonsei University, focusing on privacy, safety, and reasoning in large-scale language models."
   location         : "South Korea"
   employer         : "Yonsei University"
   uri              : # URL
