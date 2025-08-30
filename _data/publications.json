@@ -26,10 +26,11 @@
   {
     "title": "R-TOFU: Unlearning in Large Reasoning Models",
     "authors": "Sangyeon Yoon, Wonje Jeung, Albert No",
-    "venue": "EMNLP",
-    "status": "UNDER REVIEW",
+    "venue": "EMNLP (Oral Presentation)",
+    "status": "",
     "year": 2025,
     "pdf": true,
+    "selected": true,
     "pdf_url": "https://www.arxiv.org/abs/2505.15214",
     "website_url": "https://ai-isl.github.io/r-tofu",
     "desc": ""
@@ -38,9 +39,10 @@
     "title": "SEPS: A Separability Measure for Robust Unlearning in LLMs",
     "authors": "Wonje Jeung*, Sanyeon Yoon*, Albert No",
     "venue": "EMNLP",
-    "status": "UNDER REVIEW",
+    "status": "",
     "year": 2025,
     "pdf": true,
+    "selected": true,
     "pdf_url": "https://arxiv.org/abs/2505.14832",
     "desc": ""
   },
@@ -72,7 +74,7 @@
     "status": "",
     "year": 2025,
     "pdf": true,
-    "selected": true,
+    "selected": false,
     "pdf_url": "https://arxiv.org/abs/2405.17878",
     "desc": ""
   },
@@ -94,6 +96,7 @@
     "status": "",
     "year": 2024,
     "pdf": true,
+    "selected": true,
     "pdf_url": "https://arxiv.org/abs/2407.18550",
     "desc": ""
   },
@@ -104,6 +107,7 @@
     "status": "",
     "year": 2024,
     "pdf": true,
+    "selected": true,
     "pdf_url": "https://arxiv.org/abs/2404.01628",
     "desc": ""
   }
