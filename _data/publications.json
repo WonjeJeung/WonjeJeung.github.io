@@ -1,5 +1,17 @@
 [
   {
+    "title": "Multi-Level Knowledge Distillation and Dynamic Self-Supervised Learning for Continual Learning",
+    "authors": "",
+    "venue": "Technical Report, 5th CLVISION Challenge (Second Place), CVPR",
+    "status": "UNDER REVIEW",
+    "year": 2025,
+    "pdf": true,
+    "selected": true,
+    "pdf_url": "https://arxiv.org/abs/2505.14667",
+    "website_url": "https://ai-isl.github.io/safepath",
+    "desc": ""
+  },
+  {
     "title": "SAFEPATH: Preventing Harmful Reasoning in Chain-of-Thought via Early Alignment",
     "authors": "Wonje Jeung, Sangyeon Yoon, Minsuk Kang, Albert No",
     "venue": "NeurIPS",
