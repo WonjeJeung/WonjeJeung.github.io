@@ -20,10 +20,13 @@ Previously, I gained valuable research experience working with Professor <span c
 <hr>
 <h2>News</h2>
 <ul>
-  <li><b>May 2025:</b> Four new papers are now on arXiv! These include work on safety alignment in reasoning models (<span>SAFEPATH</span>), unlearning benchmarks (<span>DUSK</span> and <span>R-TOFU</span>), and unlearning fragility (<span>SEPS</span>).</li>
-  <li><b>May 2025:</b> Two papers—<span class="blue-text">LTF-TEST</span> and <span class="blue-text">RepBend</span>—have been accepted to ACL 2025. See you in Austria 🇦🇹!</li>
-  <li><b>Dec 2024:</b> Our paper on sample-based privacy auditing for final model-only scenarios will appear at the NeurIPS SoLaR Workshop. See you in Canada 🇨🇦!</li>
+  <li><b>September 2025:</b> Our NeurIPS 2025 paper <span class="blue-text">SAFEPATH: Preventing Harmful Reasoning in Chain-of-Thought via Early Alignment</span> has been accepted. See you in San Diego 🇺🇸</li>
+  <li><b>August 2025:</b> Two papers, <span class="blue-text">SEPS</span> and <span class="blue-text">R-TOFU</span>, have been accepted to EMNLP 2025. See you in Suzhou 🇨🇳</li>
+  <li><b>June 2025:</b> Gave an talk at the MLSYS group on <span class="blue-text">reasoning to achieve safety</span>.</li>
+  <li><b>May 2025:</b> Two papers, <span class="blue-text">LTF-TEST</span> and <span class="blue-text">RepBend</span>, have been accepted to ACL 2025. See you in Austria 🇦🇹</li>
+  <li><b>December 2024:</b> Our paper on <span class="blue-text">sample-based privacy auditing for final model-only scenarios</span> will appear at the NeurIPS SFLLM Workshop.  
+    Additionally, <span class="blue-text">Large Language Models Still Exhibit Bias in Long Text</span> has been accepted to the NeurIPS SoLaR Workshop. See you in Canada 🇨🇦</li>
   <li><b>July 2024:</b> One paper accepted to ECCV: <span class="blue-text">REALFRED</span>.</li>
-  <li><b>May 2024:</b> We introduce a new information-theoretic metric for evaluating unlearning.</li>
   <li><b>March 2024:</b> One paper accepted to CVPR: <span class="blue-text">EARL</span>.</li>
 </ul>
+
