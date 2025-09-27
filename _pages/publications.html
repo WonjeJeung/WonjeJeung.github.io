@@ -51,7 +51,7 @@ author_profile: true
     display: inline-block;
   }
   .paper-link {
-    color: #0056b3;
+    color: #027bff;
     text-decoration: none;
   }
   .paper-link:hover {
@@ -122,7 +122,7 @@ Show All Papers
       <!-- 오른쪽 정보 -->
       <div class="paper-info">
         <span class="paper-number">{{ number }}. </span>
-        <strong>{{ paper.title }}</strong><br/>
+        <strong style="color: #027bff;">{{ paper.title }}</strong><br/>
 
         {% if paper.authors %}
           {% assign authors_array = paper.authors | split: ", " %}

@@ -83,7 +83,7 @@
     "status": "",
     "year": 2025,
     "pdf": true,
-    "selected": false,
+    "selected": true,
     "published": true,
     "pdf_url": "https://www.arxiv.org/abs/2505.15214",
     "website_url": "https://ai-isl.github.io/r-tofu",
