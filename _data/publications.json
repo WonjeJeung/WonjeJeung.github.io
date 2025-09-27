@@ -1,6 +1,6 @@
 [
   {
-    "title": "SAFEPATH: Preventing Harmful Reasoning in Chain-of-Thought via Early Alignment",
+    "title": "A2D: Any-Order, Any-Step Safety Alignment for Diffusion Language Models",
     "authors": "Wonje Jeung*, Sangyeon Yoon*, Minsuk Kang, Albert No",
     "venue": "ICLR",
     "status": "UNDER REVIEW",
@@ -9,7 +9,7 @@
     "selected": true,
     "pdf_url": "https://arxiv.org/abs/2505.14667",
     "website_url": "https://ai-isl.github.io/safepath",
-    "img_url": "/images/papers/safepath.png",
+    "img_url": "/images/papers/A2D.png",
     "desc": ""
   },
   {
@@ -22,6 +22,7 @@
     "selected": true,
     "pdf_url": "https://www.arxiv.org/abs/2505.15209",
     "website_url": "https://ai-isl.github.io/dusk",
+    "img_url": "/images/papers/DUSK.png",
     "desc": ""
   },
   {
@@ -34,7 +35,7 @@
     "selected": false,
     "pdf_url": "https://arxiv.org/abs/2505.14667",
     "website_url": "https://ai-isl.github.io/safepath",
-    "img_url": "/images/papers/safepath.png",
+    "img_url": "/images/papers/rethinking_relearning.png",
     "desc": ""
   },
   {
@@ -47,7 +48,7 @@
     "selected": false,
     "pdf_url": "https://arxiv.org/abs/2505.14667",
     "website_url": "https://ai-isl.github.io/safepath",
-    "img_url": "/images/papers/safepath.png",
+    "img_url": "/images/papers/rainbow.png",
     "desc": ""
   },
   
