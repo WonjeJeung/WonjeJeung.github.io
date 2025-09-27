@@ -92,6 +92,11 @@ author_profile: true
     font-size: 0.9em;
     color: #555;
   }
+  .author-dim {
+  color: #777;  /* 회색 계열로 톤 다운 */
+  font-weight: normal;
+  opacity: 0.8; /* 약간 흐리게 */
+}
 </style>
 
 <p class="toggle-label" onclick="togglePapers()">
@@ -127,7 +132,7 @@ Show All Papers
             {% if trimmed_author == "Wonje Jeung" or trimmed_author == "Wonje Jeung*" %}
               <strong>{{ trimmed_author }}</strong>{% if forloop.last == false %},{% endif %}
             {% else %}
-              {{ trimmed_author }}{% if forloop.last == false %},{% endif %}
+              <span class="author-dim">{{ trimmed_author }}</span>{% if forloop.last == false %},{% endif %}
             {% endif %}
           {% endfor %}
           <br/>

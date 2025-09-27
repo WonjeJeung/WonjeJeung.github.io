@@ -4,7 +4,7 @@
     "authors": "Wonje Jeung*, Sangyeon Yoon*, Minsuk Kang, Albert No",
     "venue": "ICLR",
     "status": "UNDER REVIEW",
-    "year": 2025,
+    "year": 2026,
     "pdf": true,
     "selected": true,
     "img_url": "/images/papers/A2D.png",
@@ -15,7 +15,7 @@
     "authors": "Wonje Jeung*, Sangyeon Yoon*, Hyesoo Hong, Soeun Kim, Seungju Han, Youngjae Yu, Albert No",
     "venue": "ICLR",
     "status": "UNDER REVIEW",
-    "year": 2025,
+    "year": 2026,
     "pdf": true,
     "selected": true,
     "pdf_url": "https://www.arxiv.org/abs/2505.15209",
@@ -28,7 +28,7 @@
     "authors": "Sangyeon Yoon, Hyesoo Hong, Wonje Jeung, Albert No",
     "venue": "ICLR",
     "status": "UNDER REVIEW",
-    "year": 2025,
+    "year": 2026,
     "pdf": true,
     "selected": false,
     "img_url": "/images/papers/rethinking_relearning.png",
@@ -39,13 +39,24 @@
     "authors": "BumJun Kim*, Dongjae Jeon*, Dueun Kim*, Wonje Jeung, Albert No",
     "venue": "ICLR",
     "status": "UNDER REVIEW",
-    "year": 2025,
+    "year": 2026,
     "pdf": true,
     "selected": false,
     "img_url": "/images/papers/rainbow.png",
     "desc": ""
   },
-  
+  {
+    "title": "An Information Theoretic Metric for Evaluating Unlearning Models",
+    "authors": "Dongjae Jeon*, Wonje Jeung*, Taeheon Kim, Albert No, Jonghyun Choi",
+    "venue": "AAAI",
+    "status": "UNDER REVIEW",
+    "year": 2026,
+    "pdf": true,
+    "selected": false,
+    "pdf_url": "https://arxiv.org/abs/2405.17878",
+    "img_url": "/images/papers/COLA.png",
+    "desc": ""
+  },
   {
     "title": "SAFEPATH: Preventing Harmful Reasoning in Chain-of-Thought via Early Alignment",
     "authors": "Wonje Jeung, Sangyeon Yoon, Minsuk Kang, Albert No",
@@ -105,18 +116,6 @@
     "pdf": true,
     "pdf_url": "https://arxiv.org/abs/2412.01756",
     "img_url": "/images/papers/adversarial_auditing.png",
-    "desc": ""
-  },
-  {
-    "title": "An Information Theoretic Metric for Evaluating Unlearning Models",
-    "authors": "Dongjae Jeon*, Wonje Jeung*, Taeheon Kim, Albert No, Jonghyun Choi",
-    "venue": "",
-    "status": "",
-    "year": 2025,
-    "pdf": true,
-    "selected": false,
-    "pdf_url": "https://arxiv.org/abs/2405.17878",
-    "img_url": "/images/papers/COLA.png",
     "desc": ""
   },
   {
