@@ -122,7 +122,7 @@ Show All Papers
       <!-- 오른쪽 정보 -->
       <div class="paper-info">
         <span class="paper-number">{{ number }}. </span>
-        <a href="{{ paper.pdf_url }}"><strong style="color: #027bff; text-decoration: none">{{ paper.title }}</strong></a><br/>
+        <a href="{{ paper.pdf_url }}" style="text-decoration: none"><strong style="color: #027bff;">{{ paper.title }}</strong></a><br/>
 
         {% if paper.authors %}
           {% assign authors_array = paper.authors | split: ", " %}
