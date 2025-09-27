@@ -143,7 +143,7 @@ Show All Papers
         {% if paper.year != "" %}{% assign components = components | append: paper.year %}{% endif %}
         {{ components }}
 
-        {% if paper.pdf_url %}
+        {% if paper.pdf_url != "." %}
           <a href="{{ paper.pdf_url }}" target="_blank">[pdf]</a>
         {% endif %}
         {% if paper.website_url %}
