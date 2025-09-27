@@ -7,6 +7,7 @@
     "year": 2026,
     "pdf": true,
     "selected": true,
+    "published": false,
     "img_url": "/images/papers/A2D.png",
     "desc": ""
   },
@@ -18,6 +19,7 @@
     "year": 2026,
     "pdf": true,
     "selected": true,
+    "published": false,
     "pdf_url": "https://www.arxiv.org/abs/2505.15209",
     "website_url": "https://ai-isl.github.io/dusk",
     "img_url": "/images/papers/DUSK.png",
@@ -31,6 +33,7 @@
     "year": 2026,
     "pdf": true,
     "selected": false,
+    "published": false,
     "img_url": "/images/papers/rethinking_relearning.png",
     "desc": ""
   },
@@ -42,6 +45,7 @@
     "year": 2026,
     "pdf": true,
     "selected": false,
+    "published": false,
     "img_url": "/images/papers/rainbow.png",
     "desc": ""
   },
@@ -53,6 +57,7 @@
     "year": 2026,
     "pdf": true,
     "selected": false,
+    "published": false,
     "pdf_url": "https://arxiv.org/abs/2405.17878",
     "img_url": "/images/papers/COLA.png",
     "desc": ""
@@ -65,6 +70,7 @@
     "year": 2025,
     "pdf": true,
     "selected": true,
+    "published": true,
     "pdf_url": "https://arxiv.org/abs/2505.14667",
     "website_url": "https://ai-isl.github.io/safepath",
     "img_url": "/images/papers/safepath.png",
@@ -73,11 +79,12 @@
   {
     "title": "R-TOFU: Unlearning in Large Reasoning Models",
     "authors": "Sangyeon Yoon, Wonje Jeung, Albert No",
-    "venue": "EMNLP",
+    "venue": "EMNLP (Main)",
     "status": "",
     "year": 2025,
     "pdf": true,
     "selected": false,
+    "published": true,
     "pdf_url": "https://www.arxiv.org/abs/2505.15214",
     "website_url": "https://ai-isl.github.io/r-tofu",
     "img_url": "/images/papers/R-TOFU.png",
@@ -86,11 +93,12 @@
   {
     "title": "SEPS: A Separability Measure for Robust Unlearning in LLMs",
     "authors": "Wonje Jeung*, Sanyeon Yoon*, Albert No",
-    "venue": "EMNLP",
+    "venue": "EMNLP (Main)",
     "status": "",
     "year": 2025,
     "pdf": true,
     "selected": true,
+    "published": true,
     "pdf_url": "https://arxiv.org/abs/2505.14832",
     "img_url": "/images/papers/SEPS.png",
     "desc": ""
@@ -98,11 +106,12 @@
   {
     "title": "Representation Bending for Large Language Model Safety",
     "authors": "Ashkan Yousefpour*, Taeheon Kim*, Ryan Sungmo Kwon, Seungbeen Lee, Wonje Jeung, Seungju Han, Alvin Wan, Harrison Ngan, Youngjae Yu, Jonghyun Choi",
-    "venue": "ACL",
+    "venue": "ACL (Main)",
     "status": "",
     "year": 2025,
     "pdf": true,
     "selected": true,
+    "published": true,
     "pdf_url": "https://arxiv.org/abs/2504.01550",
     "img_url": "/images/papers/Repbend.png",
     "desc": ""
@@ -114,6 +123,7 @@
     "status": "",
     "year": 2024,
     "pdf": true,
+    "published": true,
     "pdf_url": "https://arxiv.org/abs/2412.01756",
     "img_url": "/images/papers/adversarial_auditing.png",
     "desc": ""
@@ -121,11 +131,12 @@
   {
     "title": "Large Language Models Still Exhibit Bias in Long Text",
     "authors": "Wonje Jeung, Dongjae Jeon, Ashkan Yousefpour, Jonghyun Choi",
-    "venue": "ACL",
+    "venue": "ACL (Findings)",
     "status": "",
     "year": 2025,
     "pdf": true,
     "selected": true,
+    "published": true,
     "pdf_url": "https://arxiv.org/abs/2410.17519",
     "img_url": "/images/papers/LTFTEST.png",
     "desc": ""
@@ -150,6 +161,7 @@
     "year": 2024,
     "pdf": true,
     "selected": true,
+    "published": true,
     "pdf_url": "https://arxiv.org/abs/2407.18550",
     "img_url": "/images/papers/realfred.png",
     "desc": ""
@@ -162,6 +174,7 @@
     "year": 2024,
     "pdf": true,
     "selected": true,
+    "published": true,
     "pdf_url": "https://arxiv.org/abs/2404.01628",
     "img_url": "/images/papers/earl.png",
     "desc": ""
