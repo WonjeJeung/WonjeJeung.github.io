@@ -4,12 +4,13 @@
     "title": "SAFEPATH: Preventing Harmful Reasoning in Chain-of-Thought via Early Alignment",
     "authors": "Wonje Jeung, Sangyeon Yoon, Minsuk Kang, Albert No",
     "venue": "NeurIPS",
-    "status": "UNDER REVIEW",
+    "status": "",
     "year": 2025,
     "pdf": true,
     "selected": true,
     "pdf_url": "https://arxiv.org/abs/2505.14667",
     "website_url": "https://ai-isl.github.io/safepath",
+    "img_url": "/images/papers/safepath.png",
     "desc": ""
   },
   {
