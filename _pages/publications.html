@@ -78,18 +78,17 @@ author_profile: true
     gap: 1rem;
   }
   .paper-thumb img {
-    width: 300px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border: 1px solid #ddd;
     border-radius: 4px;
   }
   .paper-info {
     flex: 1;
-    font-family: "Garamond";
   }
   .paper-desc {
     margin-top: 0.3em;
-    font-family: "Garamond";
     font-size: 0.9em;
     color: #555;
   }
@@ -112,13 +111,13 @@ Show All Papers
         {% if paper.img_url %}
           <img src="{{ paper.img_url }}" alt="thumbnail">
         {% else %}
-          <img src="/images/image-alignment-300x200.jpg" alt="thumbnail">
+          <img src="/assets/images/default-thumb.png" alt="thumbnail">
         {% endif %}
       </div>
 
       <!-- 오른쪽 정보 -->
       <div class="paper-info">
-        <!-- <span class="paper-number">{{ number }}. </span> -->
+        <span class="paper-number">{{ number }}. </span>
         <strong>{{ paper.title }}</strong><br/>
 
         {% if paper.authors %}
