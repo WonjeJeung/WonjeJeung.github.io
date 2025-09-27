@@ -13,6 +13,18 @@
     "desc": ""
   },
   {
+    "title": "DUSK: Do not unlearn shared knowledge",
+    "authors": "Wonje Jeung*, Sangyeon Yoon*, Hyesoo Hong, Soeun Kim, Seungju Han, Youngjae Yu, Albert No",
+    "venue": "ICLR",
+    "status": "UNDER REVIEW",
+    "year": 2025,
+    "pdf": true,
+    "selected": true,
+    "pdf_url": "https://www.arxiv.org/abs/2505.15209",
+    "website_url": "https://ai-isl.github.io/dusk",
+    "desc": ""
+  },
+  {
     "title": "Rethinking Benign Relearning: Syntax as the Hidden Driver of Unlearning Failures",
     "authors": "Sangyeon Yoon, Hyesoo Hong, Wonje Jeung, Albert No",
     "venue": "ICLR",
@@ -29,7 +41,7 @@
     "title": "Rainbow Padding: Mitigating Early Termination in Instruction-Tuned Diffusion LLMs",
     "authors": "BumJun Kim*, Dongjae Jeon*, Dueun Kim*, Wonje Jeung, Albert No",
     "venue": "ICLR",
-    "status": "",
+    "status": "UNDER REVIEW",
     "year": 2025,
     "pdf": true,
     "selected": false,
@@ -38,18 +50,7 @@
     "img_url": "/images/papers/safepath.png",
     "desc": ""
   },
-  {
-    "title": "DUSK: Do not unlearn shared knowledge",
-    "authors": "Wonje Jeung*, Sangyeon Yoon*, Hyesoo Hong, Soeun Kim, Seungju Han, Youngjae Yu, Albert No",
-    "venue": "ICLR",
-    "status": "UNDER REVIEW",
-    "year": 2025,
-    "pdf": true,
-    "selected": true,
-    "pdf_url": "https://www.arxiv.org/abs/2505.15209",
-    "website_url": "https://ai-isl.github.io/dusk",
-    "desc": ""
-  },
+  
   {
     "title": "SAFEPATH: Preventing Harmful Reasoning in Chain-of-Thought via Early Alignment",
     "authors": "Wonje Jeung, Sangyeon Yoon, Minsuk Kang, Albert No",
