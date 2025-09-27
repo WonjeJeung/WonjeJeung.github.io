@@ -8,6 +8,7 @@
     "pdf": true,
     "selected": true,
     "published": false,
+    "pdf_url": ".",
     "img_url": "/images/papers/A2D.png",
     "desc": ""
   },
@@ -34,6 +35,7 @@
     "pdf": true,
     "selected": false,
     "published": false,
+    "pdf_url": ".",
     "img_url": "/images/papers/rethinking_relearning.png",
     "desc": ""
   },
@@ -46,6 +48,7 @@
     "pdf": true,
     "selected": false,
     "published": false,
+    "pdf_url": ".",
     "img_url": "/images/papers/rainbow.png",
     "desc": ""
   },
