@@ -2,7 +2,7 @@
   {
     "title": "A2D: Any-Order, Any-Step Safety Alignment for Diffusion Language Models",
     "authors": "Wonje Jeung*, Sangyeon Yoon*, Yoonjun Cho, Dongjae Jeon, Sangwoo Shin, Hyesoo Hong, Albert No",
-    "venue": "UNDER REVIEW",
+    "venue": "ICLR, UNDER REVIEW",
     "status": "",
     "year": 2026,
     "pdf": true,
@@ -15,7 +15,7 @@
   {
     "title": "DUSK: Do not unlearn shared knowledge",
     "authors": "Wonje Jeung*, Sangyeon Yoon*, Hyesoo Hong, Soeun Kim, Seungju Han, Youngjae Yu, Albert No",
-    "venue": "UNDER REVIEW",
+    "venue": "ICLR, UNDER REVIEW",
     "status": "",
     "year": 2026,
     "pdf": true,
@@ -29,7 +29,7 @@
   {
     "title": "Rethinking Benign Relearning: Syntax as the Hidden Driver of Unlearning Failures",
     "authors": "Sangyeon Yoon, Hyesoo Hong, Wonje Jeung, Albert No",
-    "venue": "UNDER REVIEW",
+    "venue": "ICLR, UNDER REVIEW",
     "status": "",
     "year": 2026,
     "pdf": true,
@@ -42,7 +42,7 @@
   {
     "title": "Rainbow Padding: Mitigating Early Termination in Instruction-Tuned Diffusion LLMs",
     "authors": "BumJun Kim*, Dongjae Jeon*, Dueun Kim*, Wonje Jeung, Albert No",
-    "venue": "UNDER REVIEW",
+    "venue": "ICLR, UNDER REVIEW",
     "status": "",
     "year": 2026,
     "pdf": true,
@@ -55,12 +55,12 @@
   {
     "title": "An Information Theoretic Metric for Evaluating Unlearning Models",
     "authors": "Dongjae Jeon*, Wonje Jeung*, Taeheon Kim, Albert No, Jonghyun Choi",
-    "venue": "UNDER REVIEW",
+    "venue": "AAAI",
     "status": "",
     "year": 2026,
     "pdf": true,
-    "selected": false,
-    "published": false,
+    "selected": true,
+    "published": true,
     "pdf_url": "https://arxiv.org/abs/2405.17878",
     "img_url": "/images/papers/COLA.png",
     "desc": ""
