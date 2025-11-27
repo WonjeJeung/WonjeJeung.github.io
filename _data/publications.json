@@ -2,7 +2,7 @@
   {
     "title": "A2D: Any-Order, Any-Step Safety Alignment for Diffusion Language Models",
     "authors": "Wonje Jeung*, Sangyeon Yoon*, Yoonjun Cho, Dongjae Jeon, Sangwoo Shin, Hyesoo Hong, Albert No",
-    "venue": "ICLR, UNDER REVIEW",
+    "venue": "UNDER REVIEW",
     "status": "",
     "year": 2026,
     "pdf": true,
@@ -15,7 +15,7 @@
   {
     "title": "DUSK: Do not unlearn shared knowledge",
     "authors": "Wonje Jeung*, Sangyeon Yoon*, Hyesoo Hong, Soeun Kim, Seungju Han, Youngjae Yu, Albert No",
-    "venue": "ICLR, UNDER REVIEW",
+    "venue": "UNDER REVIEW",
     "status": "",
     "year": 2026,
     "pdf": true,
@@ -29,7 +29,7 @@
   {
     "title": "Rethinking Benign Relearning: Syntax as the Hidden Driver of Unlearning Failures",
     "authors": "Sangyeon Yoon, Hyesoo Hong, Wonje Jeung, Albert No",
-    "venue": "ICLR, UNDER REVIEW",
+    "venue": "UNDER REVIEW",
     "status": "",
     "year": 2026,
     "pdf": true,
@@ -42,7 +42,7 @@
   {
     "title": "Rainbow Padding: Mitigating Early Termination in Instruction-Tuned Diffusion LLMs",
     "authors": "BumJun Kim*, Dongjae Jeon*, Dueun Kim*, Wonje Jeung, Albert No",
-    "venue": "ICLR, UNDER REVIEW",
+    "venue": "UNDER REVIEW",
     "status": "",
     "year": 2026,
     "pdf": true,
