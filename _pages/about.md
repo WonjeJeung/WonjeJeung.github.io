@@ -17,10 +17,9 @@ redirect_from:
 👋 Hello! I'm <span class="blue-text">Wonje Jeung</span>, a second-year Master's student in <span class="blue-text">Artificial Intelligence</span> at <span class="blue-text">Yonsei University</span>, where I am fortunate to be advised by Professor <span class="blue-text">Albert No</span>.
 I work on <span class="blue-text">privacy leakage evaluation and safety-critical behavior in modern AI systems</span>.
 
-<hr>
 <h2>News</h2>
 <ul>
-  <li><b>November 2025:</b> A paper on <span class="blue-text">Machine Unlearning (IDI)</span> is accepted to AAAI 2026! See you in Singapore 🇸🇬</li>
+  <li><b>November 2025:</b> Our paper on <span class="blue-text">Machine Unlearning (IDI)</span> is accepted to AAAI 2026! See you in Singapore 🇸🇬</li>
   <li><b>September 2025:</b> Our NeurIPS 2025 paper <span class="blue-text">SAFEPATH: Preventing Harmful Reasoning in Chain-of-Thought via Early Alignment</span> has been accepted. See you in San Diego 🇺🇸</li>
   <li><b>August 2025:</b> Two papers, <span class="blue-text">SEPS</span> and <span class="blue-text">R-TOFU</span>, have been accepted to EMNLP 2025. See you in Suzhou 🇨🇳</li>
   <li><b>June 2025:</b> Gave an talk at the MLSYS group on <span class="blue-text">reasoning to achieve safety</span>.</li>
