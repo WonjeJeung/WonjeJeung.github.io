@@ -15,7 +15,8 @@ redirect_from:
 </style>
 
 👋 Hello! I'm <span class="blue-text">Wonje Jeung</span>, a second-year Master's student in <span class="blue-text">Artificial Intelligence</span> at <span class="blue-text">Yonsei University</span>, where I am fortunate to be advised by Professor <span class="blue-text">Albert No</span>.
-Previously, I gained valuable research experience working with Professor <span class="blue-text">Jonghyun Choi</span> at both Yonsei University and Seoul National University. I work on <span class="blue-text">privacy, safety, and reasoning and efficient model architectures</span>.
+I work on <span class="blue-text">privacy leakage evaluation and safety-critical behavior in modern AI systems</span>.
+Previously, I gained valuable research experience working with Professor <span class="blue-text">Jonghyun Choi</span> at both Yonsei University and Seoul National University. 
 
 <hr>
 <h2>News</h2>
