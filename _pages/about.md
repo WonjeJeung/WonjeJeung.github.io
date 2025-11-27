@@ -37,5 +37,5 @@ I work on <span class="blue-text">privacy leakage evaluation and safety-critical
   <li><b>May 2025:</b> Two papers, <span class="blue-text">LTF-TEST</span> and <span class="blue-text">RepBend</span>, have been accepted to ACL 2025. See you in Austria 🇦🇹</li> 
   <li><b>December 2024:</b> Our papers on <span class="blue-text">privacy auditing</span> and <span class="blue-text">long-text bias</span> have been accepted to NeurIPS workshops. See you in Canada 🇨🇦</li> 
   <li><b>July 2024:</b> One paper on <span class="blue-text">embodied instruction following</span> has been accepted to ECCV.</li> 
-  <li><b>March 2024:</b> One paper on <span class="blue-text">continual learning and representation stability</span> has been accepted to CVPR.</li> </ul>
+  <li><b>March 2024:</b> One paper on <span class="blue-text">continual learning and representation stability</span> has been accepted to CVPR.</li>
 </ul>
