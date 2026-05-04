@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wonje Jeung — PhD student in Computer Science at the University of Michigan. Research in LLM safety, machine unlearning, and safety alignment.">
+  <title>Wonje Jeung</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav aria-label="Site navigation">
+    <div class="nav-inner">
+      <a class="nav-name" href="index.html">Wonje Jeung</a>
+      <div class="nav-links">
+        <a href="publications.html">Publications</a>
+        <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- Profile -->
+      <section class="profile" aria-label="Profile">
+
+        <!-- Left: photo + name + links -->
+        <div class="profile-card">
+          <img class="profile-photo" src="assets/images/profile.png" alt="Wonje Jeung">
+          <!-- <div class="profile-photo-placeholder" aria-hidden="true">Photo</div> -->
+          <div>
+            <h1 class="profile-name">Wonje Jeung</h1>
+            <!-- <p class="profile-pronouns-line">(he/him)</p> -->
+            <p class="profile-role">Incoming PhD Student</p>
+            <p class="profile-institution">University of Michigan</p>
+          </div>
+          <div class="profile-links">
+            <a href="mailto:specific0924@gmail.com">Email</a>
+            <span class="sep">·</span>
+            <a href="https://scholar.google.com/citations?user=o6YVUQcAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+            <span class="sep">·</span>
+            <a href="https://github.com/wonjejeung" target="_blank" rel="noopener">GitHub</a>
+            <span class="sep">·</span>
+            <a href="https://x.com/JeungWonje" target="_blank" rel="noopener">X</a>
+            <span class="sep">·</span>
+            <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a>
+          </div>
+        </div>
+
+        <!-- Right: bio + news -->
+        <div class="profile-right">
+          <p class="profile-bio">
+            I am an incoming PhD student at the UMich
+            (advisor: <a href="https://web.eecs.umich.edu/~wangluxy/" target="_blank" rel="noopener">Lu Wang</a>),
+            and currently completing my MS in AI at Yonsei University
+            (advisor: <a href="https://albertno.notion.site/" target="_blank" rel="noopener">Albert No</a>).
+            My research focuses on alignment, privacy, and trustworthiness of large language models.
+          </p>
+
+          <div class="section" style="margin-top: var(--space-8);">
+            <h2 class="section-title" id="news-heading">News</h2>
+            <div class="news-list" id="news-list"></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Selected Publications -->
+      <section class="section" aria-labelledby="pubs-heading">
+        <h2 class="section-title" id="pubs-heading">Selected Publications</h2>
+        <div id="selected-pubs">
+          <!-- Populated by main.js from data/publications.js -->
+        </div>
+        <a class="see-all" href="publications.html">See all publications &rarr;</a>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; 2026 Wonje Jeung</span>
+      <span>Last updated May 2026</span>
+    </div>
+  </footer>
+
+  <script src="data/publications.js"></script>
+  <script src="data/news.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

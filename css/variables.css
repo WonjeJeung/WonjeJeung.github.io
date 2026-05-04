@@ -1,0 +1,34 @@
+:root {
+  /* Colors */
+  --color-bg:         #ffffff;
+  --color-text:       #1a1a1a;
+  --color-muted:      #6b7280;
+  --color-accent:     #1d4ed8;
+  --color-accent-hover: #1e40af;
+  --color-border:     #e5e7eb;
+  --color-surface:    #f9fafb;
+
+  /* Typography */
+  --font-body:  Georgia, 'Times New Roman', Times, serif;
+  --font-ui:    system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:  'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* Font sizes */
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+
+  /* Spacing */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Layout */
+  --max-width: 1100px;
+  --nav-height: 3rem;
+}
