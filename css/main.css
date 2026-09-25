@@ -350,7 +350,6 @@ main {
 
 .pub-venue {
   font-size: var(--text-sm);
-  font-style: italic;
   color: var(--color-muted);
   margin-bottom: var(--space-2);
 }
