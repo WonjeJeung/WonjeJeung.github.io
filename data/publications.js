@@ -1,12 +1,105 @@
 // Edit this file to add or update publications.
 // type: "conference" | "workshop" | "preprint"
 // selected: true → appears on the home page
-// authors: set self:true for your name, equal:true for *, corresponding:true for †
+// authors: set self: true for your name, equal: true for *, corresponding: true for †
 
 const PUBLICATIONS = [
   // ── Conference Proceedings ────────────────────────────────────────────────
   {
     id: "C1",
+    type: "conference",
+    title: "Few-Shot Truly Benign DPO Attack for Jailbreaking LLMs",
+    authors: [
+      { name: "Sangyeon Yoon", equal: true },
+      { name: "Wonje Jeung", self: true, equal: true },
+      { name: "Yoonjun Cho" },
+      { name: "Dongjae Jeon" },
+      { name: "Albert No", corresponding: true },
+    ],
+    venue: "NeurIPS",
+    year: 2026,
+    selected: true,
+    links: {
+      pdf: "[https://arxiv.org/pdf/2605.10998](https://arxiv.org/pdf/2605.10998)",
+    },
+  },
+  {
+    id: "C2",
+    type: "conference",
+    title: "VLMs Trace Without Tracking: Diagnosing Failures in Visual Path Following",
+    authors: [
+      { name: "Hyesoo Hong" },
+      { name: "Minsoo Kim" },
+      { name: "Wonje Jeung", self: true },
+      { name: "Sangyeon Yoon" },
+      { name: "Dongjae Jeon" },
+      { name: "Albert No", corresponding: true },
+    ],
+    venue: "NeurIPS",
+    year: 2026,
+    selected: false,
+    links: {
+      pdf: "[https://arxiv.org/pdf/2605.15672](https://arxiv.org/pdf/2605.15672)",
+    },
+  },
+  {
+    id: "C3",
+    type: "conference",
+    title:
+      "Systematic Hazard Sampling: Minimal-Variance Event Scheduling for CTMC/DTMC Discrete Diffusion and Flow Models",
+    authors: [
+      { name: "Seunghwan Jang" },
+      { name: "Wonje Jeung", self: true },
+      { name: "Soojean Han", corresponding: true },
+    ],
+    venue: "NeurIPS",
+    year: 2026,
+    selected: false,
+    links: {},
+  },
+  {
+    id: "C4",
+    type: "conference",
+    title:
+      "Rewarding the Prompt, Not the Robot: Paraphrase-Induced Contradictions in Vision-Language Reward Models",
+    authors: [
+      { name: "Wonje Jeung", self: true },
+      { name: "Sangyeon Yoon" },
+      { name: "Hyesoo Hong" },
+      { name: "Yoonjun Cho" },
+      { name: "Dongjae Jeon" },
+      { name: "Bumjun Kim" },
+      { name: "Youngjae Yu", corresponding: true },
+      { name: "Jean Oh", corresponding: true },
+      { name: "Albert No", corresponding: true },
+    ],
+    venue: "EMNLP",
+    year: 2026,
+    selected: true,
+    links: {},
+  },
+  {
+    id: "C5",
+    type: "conference",
+    title:
+      "BenchPreS: A Benchmark for Context-Aware Personalized Preference Selectivity of Persistent-Memory LLMs",
+    authors: [
+      { name: "Sangyeon Yoon" },
+      { name: "Sunkyoung Kim" },
+      { name: "Hyesoo Hong" },
+      { name: "Wonje Jeung", self: true },
+      { name: "Yongil Kim" },
+      { name: "Wooseok Seo" },
+      { name: "Heuiyeen Yeen" },
+      { name: "Albert No", corresponding: true },
+    ],
+    venue: "EMNLP",
+    year: 2026,
+    selected: false,
+    links: {},
+  },
+  {
+    id: "C6",
     type: "conference",
     title: "DUSK: Do not unlearn shared knowledge",
     authors: [
@@ -21,13 +114,14 @@ const PUBLICATIONS = [
     venue: "Findings of ACL",
     year: 2026,
     selected: false,
-    links: { pdf: "https://arxiv.org/pdf/2505.15209",
-        code: "https://github.com/AI-ISL/DUSK",
-        website: "https://ai-isl.github.io/dusk",
-     },
+    links: {
+      pdf: "[https://arxiv.org/pdf/2505.15209](https://arxiv.org/pdf/2505.15209)",
+      code: "[https://github.com/AI-ISL/DUSK](https://github.com/AI-ISL/DUSK)",
+      website: "[https://ai-isl.github.io/dusk](https://ai-isl.github.io/dusk)",
+    },
   },
   {
-    id: "C2",
+    id: "C7",
     type: "conference",
     title: "A2D: Any-Order, Any-Step Safety Alignment for Diffusion Language Models",
     authors: [
@@ -42,13 +136,14 @@ const PUBLICATIONS = [
     venue: "ICLR",
     year: 2026,
     selected: true,
-    links: {pdf: "https://arxiv.org/pdf/2509.23286",
-      "code": "https://github.com/WonjeJeung/A2D",
-      "website": "https://ai-isl.github.io/A2D",
+    links: {
+      pdf: "[https://arxiv.org/pdf/2509.23286](https://arxiv.org/pdf/2509.23286)",
+      code: "[https://github.com/WonjeJeung/A2D](https://github.com/WonjeJeung/A2D)",
+      website: "[https://ai-isl.github.io/A2D](https://ai-isl.github.io/A2D)",
     },
   },
   {
-    id: "C3",
+    id: "C8",
     type: "conference",
     title: "Rethinking Benign Relearning: Syntax as the Hidden Driver of Unlearning Failures",
     authors: [
@@ -60,10 +155,12 @@ const PUBLICATIONS = [
     venue: "ICLR",
     year: 2026,
     selected: false,
-    links: { pdf: "https://arxiv.org/pdf/2602.03379" },
+    links: {
+      pdf: "[https://arxiv.org/pdf/2602.03379](https://arxiv.org/pdf/2602.03379)",
+    },
   },
   {
-    id: "C4",
+    id: "C9",
     type: "conference",
     title: "Rainbow Padding: Mitigating Early Termination in Instruction-Tuned Diffusion LLMs",
     authors: [
@@ -77,13 +174,13 @@ const PUBLICATIONS = [
     year: 2026,
     selected: false,
     links: {
-      pdf: "https://arxiv.org/pdf/2510.03680",
-      code: "https://github.com/quasar529/rainbow-padding",
-      website: "https://ai-isl.github.io/rainbow-padding",
+      pdf: "[https://arxiv.org/pdf/2510.03680](https://arxiv.org/pdf/2510.03680)",
+      code: "[https://github.com/quasar529/rainbow-padding](https://github.com/quasar529/rainbow-padding)",
+      website: "[https://ai-isl.github.io/rainbow-padding](https://ai-isl.github.io/rainbow-padding)",
     },
   },
   {
-    id: "C5",
+    id: "C10",
     type: "conference",
     title: "An Information Theoretic Evaluation Metric For Strong Unlearning",
     authors: [
@@ -96,10 +193,12 @@ const PUBLICATIONS = [
     venue: "AAAI",
     year: 2026,
     selected: false,
-    links: { pdf: "https://arxiv.org/pdf/2405.17878" },
+    links: {
+      pdf: "[https://arxiv.org/pdf/2405.17878](https://arxiv.org/pdf/2405.17878)",
+    },
   },
   {
-    id: "C6",
+    id: "C11",
     type: "conference",
     title: "SAFEPATH: Preventing Harmfulness Reasoning in Chain-of-Thought via Early Alignment",
     authors: [
@@ -112,13 +211,13 @@ const PUBLICATIONS = [
     year: 2025,
     selected: true,
     links: {
-      pdf: "https://arxiv.org/pdf/2505.14667",
-      code: "https://github.com/cryingInitial/SAFEPATH",
-      website: "https://ai-isl.github.io/safepath",
+      pdf: "[https://arxiv.org/pdf/2505.14667](https://arxiv.org/pdf/2505.14667)",
+      code: "[https://github.com/cryingInitial/SAFEPATH](https://github.com/cryingInitial/SAFEPATH)",
+      website: "[https://ai-isl.github.io/safepath](https://ai-isl.github.io/safepath)",
     },
   },
   {
-    id: "C7",
+    id: "C12",
     type: "conference",
     title: "SEPS: A Separability Measure for Robust Unlearning in LLMs",
     authors: [
@@ -129,10 +228,12 @@ const PUBLICATIONS = [
     venue: "EMNLP",
     year: 2025,
     selected: true,
-    links: { pdf: "https://arxiv.org/pdf/2505.14832" },
+    links: {
+      pdf: "[https://arxiv.org/pdf/2505.14832](https://arxiv.org/pdf/2505.14832)",
+    },
   },
   {
-    id: "C8",
+    id: "C13",
     type: "conference",
     title: "R-TOFU: Unlearning in Large Reasoning Models",
     authors: [
@@ -143,10 +244,12 @@ const PUBLICATIONS = [
     venue: "EMNLP",
     year: 2025,
     selected: false,
-    links: { pdf: "https://arxiv.org/pdf/2505.15214" },
+    links: {
+      pdf: "[https://arxiv.org/pdf/2505.15214](https://arxiv.org/pdf/2505.15214)",
+    },
   },
   {
-    id: "C9",
+    id: "C14",
     type: "conference",
     title: "Large Language Models Still Exhibit Bias in Long Text",
     authors: [
@@ -158,10 +261,12 @@ const PUBLICATIONS = [
     venue: "Findings of ACL",
     year: 2025,
     selected: false,
-    links: { pdf: "https://arxiv.org/pdf/2410.17519" },
+    links: {
+      pdf: "[https://arxiv.org/pdf/2410.17519](https://arxiv.org/pdf/2410.17519)",
+    },
   },
   {
-    id: "C10",
+    id: "C15",
     type: "conference",
     title: "Representation Bending for Large Language Model Safety",
     authors: [
@@ -180,12 +285,12 @@ const PUBLICATIONS = [
     year: 2025,
     selected: false,
     links: {
-      pdf: "https://arxiv.org/pdf/2504.01550",
-      code: "https://github.com/AIM-Intelligence/RepBend",
+      pdf: "[https://arxiv.org/pdf/2504.01550](https://arxiv.org/pdf/2504.01550)",
+      code: "[https://github.com/AIM-Intelligence/RepBend](https://github.com/AIM-Intelligence/RepBend)",
     },
   },
   {
-    id: "C11",
+    id: "C16",
     type: "conference",
     title: "ReALFRED: An Embodied Instruction Following Benchmark in Photo-Realistic Environments",
     authors: [
@@ -200,13 +305,13 @@ const PUBLICATIONS = [
     year: 2024,
     selected: false,
     links: {
-      pdf: "https://arxiv.org/pdf/2407.18550",
-      code: "https://github.com/snumprlab/realfred",
-      website: "https://twoongg.github.io/projects/realfred/",
+      pdf: "[https://arxiv.org/pdf/2407.18550](https://arxiv.org/pdf/2407.18550)",
+      code: "[https://github.com/snumprlab/realfred](https://github.com/snumprlab/realfred)",
+      website: "[https://twoongg.github.io/projects/realfred/](https://twoongg.github.io/projects/realfred/)",
     },
   },
   {
-    id: "C12",
+    id: "C17",
     type: "conference",
     title: "Learning Equi-angular Representations for Online Continual Learning",
     authors: [
@@ -224,92 +329,42 @@ const PUBLICATIONS = [
     venue: "CVPR",
     year: 2024,
     selected: false,
-    links: { pdf: "https://arxiv.org/pdf/2404.01628",
-      code: "https://github.com/yonseivnl/earl",
-     },
+    links: {
+      pdf: "[https://arxiv.org/pdf/2404.01628](https://arxiv.org/pdf/2404.01628)",
+      code: "[https://github.com/yonseivnl/earl](https://github.com/yonseivnl/earl)",
+    },
   },
 
   // ── Workshops ────────────────────────────────────────────────────────────
   {
     id: "W1",
     type: "workshop",
-    title: "Adversarial Sample-Based Approach for Tighter Privacy Auditing in Final Model-Only Scenarios",
+    title:
+      "Adversarial Sample-Based Approach for Tighter Privacy Auditing in Final Model-Only Scenarios",
     authors: [
       { name: "Sangyeon Yoon", equal: true },
       { name: "Wonje Jeung", self: true, equal: true },
       { name: "Albert No", corresponding: true },
     ],
-    venue: "NeurIPS Workshop on Statistical Foundations of LLMs and Foundation Models (SFLLM)",
+    venue:
+      "NeurIPS Workshop on Statistical Foundations of LLMs and Foundation Models (SFLLM)",
     year: 2024,
     selected: false,
-    links: {pdf: "https://arxiv.org/pdf/2412.01756"},
+    links: {
+      pdf: "[https://arxiv.org/pdf/2412.01756](https://arxiv.org/pdf/2412.01756)",
+    },
   },
   {
     id: "W2",
     type: "workshop",
-    title: "Multi-Level Knowledge Distillation and Dynamic Self-Supervised Learning for Continual Learning",
-    authors: [
-      { name: "SNUMPR TEAM" },
-    ],
+    title:
+      "Multi-Level Knowledge Distillation and Dynamic Self-Supervised Learning for Continual Learning",
+    authors: [{ name: "SNUMPR TEAM" }],
     venue: "CVPR Workshop on CLVISION (2nd Place)",
     year: 2024,
     selected: false,
-    links: {pdf: "https://arxiv.org/pdf/2508.12692"},
-  },
-
-  // ── Preprints ─────────────────────────────────────────────────────────────
-  {
-    id: "P1",
-    type: "preprint",
-    title: "Rewarding the Prompt, Not the Robot: Paraphrase-Induced Contradictions in Vision-Language Reward Models",
-    authors: [
-      { name: "Wonje Jeung", self: true },
-      { name: "Sangyeon Yoon" },
-      { name: "Hyesoo Hong" },
-      { name: "Yoonjun Cho" },
-      { name: "Dongjae Jeon" },
-      { name: "Bumjun Kim" },
-      { name: "Youngjae Yu", corresponding: true },
-      { name: "Jean Oh", corresponding: true },
-      { name: "Albert No", corresponding: true },
-    ],
-    venue: "Under Review",
-    year: 2026,
-    selected: true,
-    links: {},
-  },
-  {
-    id: "P2",
-    type: "preprint",
-    title: "Be Helpful, Not Careful: Breaking Refusal Behavior with Minimal DPO Fine-Tuning",
-    authors: [
-      { name: "Sangyeon Yoon", equal: true },
-      { name: "Wonje Jeung", self: true, equal: true },
-      { name: "Yoonjun Cho" },
-      { name: "Albert No", corresponding: true },
-    ],
-    venue: "Under Review",
-    year: 2026,
-    selected: true,
-    links: {},
-  },
-  {
-    id: "P3",
-    type: "preprint",
-    title: "BenchPreS: A Benchmark for Context-Aware Personalized Preference Selectivity of Persistent-Memory LLMs",
-    authors: [
-      { name: "Sangyeon Yoon" },
-      { name: "Sunkyoung Kim" },
-      { name: "Hyesoo Hong" },
-      { name: "Wonje Jeung", self: true },
-      { name: "Yongil Kim" },
-      { name: "Wooseok Seo" },
-      { name: "Heuiyeen Yeen" },
-      { name: "Albert No", corresponding: true },
-    ],
-    venue: "Under Review",
-    year: 2026,
-    selected: false,
-    links: {},
+    links: {
+      pdf: "[https://arxiv.org/pdf/2508.12692](https://arxiv.org/pdf/2508.12692)",
+    },
   },
 ];
